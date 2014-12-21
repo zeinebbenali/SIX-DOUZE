@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+   <route id="SitePortailBundle_list_admin" pattern="/superadmin/gereradmin/list">
+        <default key="_controller">SitePortailBundle:Admin:List</default>
+    </route>
+	  <route id="SitePortailBundle_homepage" pattern="/index">
+        <default key="_controller">SitePortailBundle:Index:index</default>
+    </route>
+	
+	<route id="SitePortailBundle_inscription" pattern="/index/inscription">
+        <default key="_controller">SitePortailBundle:Membre:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_tchat" pattern="/index/tchat">
+        <default key="_controller">SitePortailBundle:Article:tchat</default>
+    </route>
+	<route id="SitePortailBundle_pager" pattern="/index/categorie{categorie}">
+        <default key="_controller">SitePortailBundle:Article:Pager</default>
+    </route>
+	<route id="SitePortailBundle_ajoutNL" pattern="/index/">
+        <default key="_controller">SitePortailBundle:AbonneNewsLetters:AjoutAbonne</default>
+    </route>
+	
+	<route id="SitePortailBundle_edit_membre" pattern="/index/edit{id}">
+        <default key="_controller">SitePortailBundle:Membre:Edit</default>
+    </route>
+	<route id="SitePortailBundle_valide_edit_membre" pattern="/index/edit">
+        <default key="_controller">SitePortailBundle:Membre:Edit</default>
+    </route>
+	<route id="SitePortailBundle_contact" pattern="/index/contact">
+        <default key="_controller">SitePortailBundle:Contact:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_liste_annonce_site" pattern="/index/annonce {type}/{categorie}">
+        <default key="_controller">SitePortailBundle:Annonce:ListeSite</default>
+    </route>
+	<route id="SitePortailBundle_lire_annonce" pattern="/index/annonce/lire {id}/{categorie}">
+        <default key="_controller">SitePortailBundle:Annonce:LireSite</default>
+    </route>
+	
+	<route id="SitePortailBundle_connexion" pattern="/index/connexion">
+        <default key="_controller">SitePortailBundle:Membre:Connexion</default>
+    </route>
+     <route id="SitePortailBundle_motpass_perdu" pattern="/index/mail_password">
+        <default key="_controller">SitePortailBundle:Membre:Forget</default>
+    </route>
+	<route id="SitePortailBundle_deconnexion" pattern="/index/deconnexion">
+        <default key="_controller">SitePortailBundle:Membre:Deconnexion</default>
+    </route>
+	<route id="SitePortailBundle_ajout_msg" pattern="/index/message">
+        <default key="_controller">SitePortailBundle:Message:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_repondre_sondage" pattern="/index/sondage">
+        <default key="_controller">SitePortailBundle:Sondage:Repondre</default>
+    </route>
+	<route id="SitePortailBundle_cre_annonce" pattern="/index/annonce{categorie}">
+        <default key="_controller">SitePortailBundle:Annonce:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_ajout_annonce" pattern="/index/annonce">
+        <default key="_controller">SitePortailBundle:Annonce:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_proposer_article" pattern="/index/article">
+        <default key="_controller">SitePortailBundle:Article:Propose</default>
+    </route>
+	<route id="SitePortailBundle_ajout_commentaire" pattern="/index/article/commentaire">
+        <default key="_controller">SitePortailBundle:Commentaire:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_lire_article" pattern="/index/{id}">
+        <default key="_controller">SitePortailBundle:Article:Lire</default>
+    </route>
+	 <route id="SitePortailBundle_conxAdmin" pattern="/admin">
+        <default key="_controller">SitePortailBundle:Admin:index</default>
+    </route>
+	<route id="SitePortailBundle_AdminGestion" pattern="/admin/">
+        <default key="_controller">SitePortailBundle:Admin:Connexion</default>
+    </route>
+	<route id="SitePortailBundle_Admin_deconnexion" pattern="/admin">
+        <default key="_controller">SitePortailBundle:Admin:Deconnexion</default>
+    </route>
+	<route id="SitePortailBundle_gerer_contact" pattern="/admin/contact">
+        <default key="_controller">SitePortailBundle:Contact:index</default>
+    </route>
+	
+	<route id="SitePortailBundle_Admincontact" pattern="/admin/contact/list">
+        <default key="_controller">SitePortailBundle:Contact:AffichAll</default>
+    </route>
+	<route id="SitePortailBundle_AdmincontactNew" pattern="/admin/Contact/new">
+        <default key="_controller">SitePortailBundle:Contact:News</default>
+    </route>
+	<route id="SitePortailBundle_Admin_deletcontact" pattern="/admin/Contact/delet{id}">
+        <default key="_controller">SitePortailBundle:Contact:Delete</default>
+    </route>
+	
+	<route id="SitePortailBundle_Admin_Affichcontact" pattern="/admin/Contact/affich{id}">
+        <default key="_controller">SitePortailBundle:Contact:Affich</default>
+    </route>
+	<route id="SitePortailBundle_gerer_message" pattern="/admin/message">
+        <default key="_controller">SitePortailBundle:Message:index</default>
+    </route>
+	<route id="SitePortailBundle_gerer_message_list" pattern="/admin/message/list">
+        <default key="_controller">SitePortailBundle:Message:AffichAll</default>
+    </route>
+	<route id="SitePortailBundle_gerer_message_new" pattern="/admin/message/news">
+        <default key="_controller">SitePortailBundle:Message:News</default>
+    </route>
+	<route id="SitePortailBundle_gerer_message_affiche" pattern="/admin/message/affiche{id}">
+        <default key="_controller">SitePortailBundle:Message:Affich</default>
+    </route>
+	<route id="SitePortailBundle_gerer_message_delete" pattern="/admin/message/liste{id}">
+        <default key="_controller">SitePortailBundle:Message:Delete</default>
+    </route>
+	<route id="SitePortailBundle_valid_message" pattern="/admin/message/liste/valid{id}">
+        <default key="_controller">SitePortailBundle:Message:Valide</default>
+    </route>
+	<route id="SitePortailBundle_Admin_listMembre" pattern="/admin/membre">
+        <default key="_controller">SitePortailBundle:Membre:List</default>
+    </route>
+	<route id="SitePortailBundle_gestion_NewsLetters" pattern="/admin/newsletters">
+        <default key="_controller">SitePortailBundle:NewsLetters:Index</default>
+    </route>
+	<route id="SitePortailBundle_NewsLetters_ajout" pattern="/admin/newsletters/ajout">
+        <default key="_controller">SitePortailBundle:NewsLetters:Ajout</default>
+    </route>
+	<route id="SitePortailBundle_gestion_NewsLetters_liste" pattern="/admin/newsletters/list">
+        <default key="_controller">SitePortailBundle:AbonneNewsLetters:ListAbonne</default>
+    </route>
+	
+	<route id="SitePortailBundle_Admin_delet_InscriNl" pattern="/admin/newsletters/list{email}">
+        <default key="_controller">SitePortailBundle:AbonneNewsLetters:DeleteAbonne</default>
+    </route>
+	
+	<route id="SitePortailBundle_SuperAdmin_gestion" pattern="/superadmin">
+        <default key="_controller">SitePortailBundle:Superviseur:index</default>
+    </route>
+	<route id="SitePortailBundle_SuperAdmin_gere_admin" pattern="/superadmin/gereadmin">
+        <default key="_controller">SitePortailBundle:Superviseur:Admin</default>
+    </route>
+	<route id="SitePortailBundle_ajout_admin" pattern="/superadmin/ajoutadmin">
+        <default key="_controller">SitePortailBundle:Admin:Ajout</default>
+    </route>
+	
+	<route id="SitePortailBundle_edit_admin" pattern="/superadmin/gereadmin/edit{id}">
+        <default key="_controller">SitePortailBundle:Admin:Modif</default>
+    </route>
+	
+	<route id="SitePortailBundle_valid_edit_admin" pattern="/superadmin/gereadmin/edit">
+        <default key="_controller">SitePortailBundle:Admin:Modif</default>
+    </route>
+	<route id="SitePortailBundle_delete_admin" pattern="/superadmin/gereadmin/delete{id}">
+        <default key="_controller">SitePortailBundle:Admin:Supprim</default>
+    </route>
+	<route id="SitePortailBundle_gere_annonce" pattern="/admin/annonce">
+        <default key="_controller">SitePortailBundle:Annonce:Liste</default>
+    </route>
+	<route id="SitePortailBundle_liste_annonce" pattern="/admin/annonce{categorie}">
+        <default key="_controller">SitePortailBundle:Annonce:Liste</default>
+    </route>
+	<route id="SitePortailBundle_supprime_annonce" pattern="/admin/annonce/delete{categorie}/{id}">
+        <default key="_controller">SitePortailBundle:Annonce:Delete</default>
+    </route>
+		<route id="SitePortailBundle_valide_annonce" pattern="/admin/annonce/valide{categorie}/{id}">
+        <default key="_controller">SitePortailBundle:Annonce:Valide</default>
+    </route>
+	<route id="SitePortailBundle_affiche_annonce" pattern="/admin/annonce/affiche{categorie}/{id}">
+        <default key="_controller">SitePortailBundle:Annonce:Affiche</default>
+    </route>
+<route id="SitePortailBundle_gestion_sondage" pattern="/admin/sondage">
+        <default key="_controller">SitePortailBundle:Sondage:Index</default>
+    </route>
+<route id="SitePortailBundle_ajout_sondage" pattern="/admin/sondage/ajout">
+<default key="_controller">SitePortailBundle:Sondage:Ajout</default>
+</route>
+<route id="SitePortailBundle_resultat_sondage" pattern="/admin/sondage/resultat">
+<default key="_controller">SitePortailBundle:Sondage:Consultat</default>
+</route>
+<route id="SitePortailBundle_gere_article" pattern="/admin/article">
+<default key="_controller">SitePortailBundle:Article:Index</default>
+</route>
+<route id="SitePortailBundle_Ajout_article" pattern="/admin/article/ajout">
+<default key="_controller">SitePortailBundle:Article:Ajout</default>
+</route>
+<route id="SitePortailBundle_valide_article" pattern="/admin/article/valide{id}/{categorie}">
+<default key="_controller">SitePortailBundle:Article:Valide</default>
+</route>
+<route id="SitePortailBundle_liste_categorie" pattern="/admin/article/Liste">
+<default key="_controller">SitePortailBundle:Article:Liste</default>
+</route>
+<route id="SitePortailBundle_Liste_article" pattern="admin/article/liste/{categorie}">
+<default key="_controller">SitePortailBundle:Article:Liste</default>
+</route>
+<route id="SitePortailBundle_affiche_article" pattern="/admin/article/affiche/{id}">
+<default key="_controller">SitePortailBundle:Article:Affiche</default>
+</route>
+<route id="SitePortailBundle_supprime_article" pattern="/admin/article/delete/{id}/{categorie}">
+<default key="_controller">SitePortailBundle:Article:Delete</default>
+</route>
+</routes>

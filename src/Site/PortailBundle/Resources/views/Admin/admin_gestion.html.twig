@@ -1,0 +1,61 @@
+
+
+
+{% extends "SitePortailBundle:Admin:admin_layout.html.twig" %}
+
+{% block bar %}
+<div id="nav">
+<table><tr><th><h1>
+welcome {{ app.session.get('nom') }} 
+</h1></th><td><a href="{{ path('SitePortailBundle_Admin_deconnexion') }}">Deconnexion</a></td><td><a href="{{ path('SitePortailBundle_homepage') }}">www.six_douze.com</a></td></tr></table> 
+</div>
+{% endblock %}
+{% block admin %}
+
+<img align="right" src="{{ asset('images/admin.png') }}"   />
+
+{% endblock %}
+
+{% block content %}
+
+<table id="liste_menu" >
+<tr>
+	<TD valign="top" >
+	<div id="menu">
+                            <ul>
+<li><a href="{{ path('SitePortailBundle_Admin_listMembre') }}"><h4>Gestion des  Membres</h4></a></li>
+<li><a href="{{ path('SitePortailBundle_gere_article') }}"><h4>Gestion des Articles</h4></a></li>
+<li><a href="{{ path('SitePortailBundle_gerer_contact') }}"><h4>Gestion des contacts</h4></a></li>
+<li><a href="{{ path('SitePortailBundle_gerer_message') }}"><h4>Gestion des messages</h4></a></li>
+<li><a href="{{ path('SitePortailBundle_gestion_NewsLetters') }}"><h4>Gestion des NewsLetters</h4></a></li>
+<li><a href="{{ path('SitePortailBundle_gestion_sondage') }}"><h4>Gestion des Sondages</h4></a></li>
+<li><a href="{{ path('SitePortailBundle_gere_annonce') }}"><h4>Gestion des Annonces</h4></a></li>
+{% if app.session.get('type')=='superviseur' %} 
+<li><a href="{{ path('SitePortailBundle_SuperAdmin_gere_admin') }}" ><H4>Gestion des Administrateur</h4></a></li>
+{% endif %}
+
+</ul>
+                        </div>
+	
+	
+	</TD>
+	<TD width=100%" height="100%"><div id="gestion">
+	{% block gestion %}
+	<table>
+	<tr><td id="titre">
+	<center><h1>
+welcome {{ app.session.get('type') }} 
+</h1></center>
+	</td>
+	<tr>
+	
+	</table>
+	{% endblock %}
+	</div>
+	</TD>
+</tr>
+</table>
+
+<br><br><br>
+
+{% endblock %}

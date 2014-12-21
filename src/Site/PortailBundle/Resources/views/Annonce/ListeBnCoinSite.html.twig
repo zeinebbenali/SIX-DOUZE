@@ -1,0 +1,49 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+
+<div id="corp" STYLE="background:#ffffff;" >
+<center><br>
+<center><b>La Liste des {{type}} Annonces de BonCoin</b></center><br><br>
+<table style="padding:10px;border-radius:6px;width:100%;" cellspacing="10">
+<tr style="padding:10px;background-color:#EBEBFF;">
+<th>type</th>
+
+<th>nature</th>
+<th>date</th>
+<th>prix</th>
+
+<th>gouvernourat</th>
+
+<th>email</th>
+<th>id admin</th>
+<th>id membre</th>
+<th>Afficher</th>
+<th>Valider</th>
+<th>Supprimer</th>
+</tr>
+{% for anc in annonces %}
+<tr>
+
+<td>{{ anc.type }}</td>
+<td>{{ anc.nature }}</td>
+
+<td>{{ anc.date}}</td>
+<td>{{ anc.prix}}</td>
+
+<td>{{ anc.gouvern}}</td>
+
+<td>{{ anc.email}}</td>
+<td>{{ anc.id_admin}}</td>
+<td>{{ anc.id_mbr}}</td>
+<td><a href="{{ path('SitePortailBundle_affiche_annonce', { 'id': anc.id,'categorie':'anc_bncoin'}) }}">Affiche</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun Annonces n'a ete trouve.</td></tr>
+{% endfor %}
+</table>
+</center>
+</div>
+
+{% endblock %}

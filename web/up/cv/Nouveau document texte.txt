@@ -1,0 +1,46 @@
+#article12{height:250px;font-size:1em;
+
+}
+#article12 .menu_div{position:relative;}
+#article12 .menu_ul{padding-left:10%;}
+#article12 .menu_div ul{width:90%;height:30px;margin-top:50px;
+background:#888;background:-moz-linear-gradient(top,#ccc,#555);background:-webkit-gradient(linear,left top,left bottom,from(#ccc),to(#555));
+-moz-box-shadow:0px 1px 2px black;-webkit-box-shadow:0px 1px 2px black;box-shadow:0px 1px 2px black;}
+#article12 .menu_div ul li ul{display:none;}
+#article12 .menu_div ul li{float:left;position:relative;list-style:none;height:30px;}
+#article12 .menu_div ul li a{display:block;height:23px;padding:7px 20px 0px 20px;text-decoration:none;color:#000000;}
+#article12 .menu_div ul li:hover a{
+background:#222;background:-moz-linear-gradient(top,#111,#444 50%);background:-webkit-gradient(linear,left top,left bottom,from(#111),color-stop(0.5,#555));
+color:#fff;border-top:3px solid #0C9;height:23px;padding-top:4px;}
+#article12 .menu_div ul li:hover ul{display:block;position:absolute;z-index:100;top:-22px;left:50%;margin-left:-22px;
+-moz-box-shadow:0px 0px 2px black;-webkit-box-shadow:0px 0px 2px black;box-shadow:0px 0px 2px black;}
+#article12 .menu_div ul li ul:before{content:"";position:absolute;top:-5px;left:10px;width:0px;height:0px;border-bottom:10px solid #0C9;border-left:10px solid transparent;
+border-right:10px solid transparent;}
+#article12 .menu_div ul li:nth-child(2) ul:before{content:"";border-bottom-color:#FF0066;}
+#article12 .menu_div ul li:nth-child(3) ul:before{content:"";border-bottom-color:#C09}
+#article12 .menu_div ul li:nth-child(4) ul:before{content:"";border-bottom-color:#9C0;}
+#article12 .menu_div ul li:nth-child(5) ul:before{content:"";border-bottom-color:#FF1919;}
+#article12 .menu_div ul li:nth-child(6) ul:before{content:"";border-bottom-color:#FF6600;}
+#article12 .menu_div ul li:nth-child(7) ul:before{content:"";border-bottom-color:#A352CC;}
+
+#article12 .menu_div ul li ul{width:auto;height:auto;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:5px 0;}
+#article12 .menu_div ul li ul li{float:none;white-space:nowrap;height:18px;padding-top:5px;padding-bottom:2px;
+}
+#article12 .menu_div ul li:hover ul li a{-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px;background:none;font-size:1em;height:20px;padding:2px 20px 2px 10px;border:none;}
+#article12 .menu_div ul li ul li a:hover{background:rgba(255,255,255,0.2);}
+
+#article12 .menu_div ul li:nth-child(2) ul{background:#FF0066;background:-moz-linear-gradient(top,#FF0066 40%,#E6005C);background:-webkit-gradient(linear,left top,left bottom,color-stop(0.4,#FF0066),to(#E6005C));}
+#article12 .menu_div ul li:nth-child(3) ul{background:#c09;background:-moz-linear-gradient(top,#C09 40%,#800060);background:-webkit-gradient(linear,left top,left bottom,color-stop(0.4,#c09),to(#800060));}
+#article12 .menu_div ul li:nth-child(4) ul{background:#9c0;background:-moz-linear-gradient(top,#9C0 40%,#608000);background:-webkit-gradient(linear,left top,left bottom,color-stop(0.4,#9c0),to(#608000));}
+#article12 .menu_div ul li:nth-child(5) ul{background:#FF1919;background:-moz-linear-gradient(top,#FF1919 40%,#FF0000);background:-webkit-gradient(linear,left top,left bottom,color-stop(0.4,#FF1919),to(#FF0000));}
+#article12 .menu_div ul li:nth-child(6) ul{background:#FF3300;background:-moz-linear-gradient(top,#FF7519 40%,#FF6600);background:-webkit-gradient(linear,left top,left bottom,color-stop(0.4,#FF7519),to(#FF6600));}
+#article12 .menu_div ul li:nth-child(7) ul{background:#A352CC;background:-moz-linear-gradient(top,#A352CC 40%,#B85CE6);background:-webkit-gradient(linear,left top,left bottom,color-stop(0.4,#A352CC),to(#B85CE6));}
+#article12 .menu_div ul li:nth-child(1):hover a{border-color:#FF0000;}
+#article12 .menu_div ul li:nth-child(2):hover a{border-color:#FF0066;}
+
+#article12 .menu_div ul li:nth-child(3):hover a{border-color:#C09;}
+#article12 .menu_div ul li:nth-child(4):hover a{border-color:#9C0;}
+#article12 .menu_div ul li:nth-child(5):hover a{border-color:#E60000;}
+#article12 .menu_div ul li:nth-child(6):hover a{border-color:#FF6600;}
+#article12 .menu_div ul li:nth-child(7):hover a{border-color:#A352CC;}
+#article12 .menu_div ul li:nth-child(8):hover a{border-color:#FFFF00;}

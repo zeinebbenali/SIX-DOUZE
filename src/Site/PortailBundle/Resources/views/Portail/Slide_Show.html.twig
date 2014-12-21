@@ -1,0 +1,24 @@
+	<!-- Start WOWSlider.com BODY section -->
+	<div id="wowslider-container1" valign="top" >
+	
+	<div class="ws_images"><ul>
+	{% set i=0%}
+	{% for art in app.session.get('article') %}
+<li><a href={{ path('SitePortailBundle_lire_article', { 'id': art.id } ) }}> <img onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 2, 0);" scrollamount="2" src="{{ asset(art.media)}}" alt="{{art.titre}}" title="{{art.titre}}" id="{{'wows'~i}}" height="476px" width="710px"/></a></li>
+{%  set i=1+i %}
+{% endfor %}
+</ul></div>
+<div class="ws_bullets"><div>
+{%  set i=1%}
+{% for art in app.session.get('article') %}
+<a href="{{ path('SitePortailBundle_lire_article',{ 'id': art.id }) }}" ><img src="{{ asset(art.media)}}" alt="{{art.titre}}" height="90px" width="140px"/>{{i}}</a>
+{%  set i=1+i %}
+{% endfor %}
+</div></div>
+
+	</div>
+	<script type="text/javascript" src="{{ asset('engine1/wowslider.js')}}"></script>
+	<script type="text/javascript" src="{{ asset('engine1/script.js')}}"></script>
+	<!-- End WOWSlider.com BODY section -->
+</div>
+	<div class="slideshow-frame"></div>

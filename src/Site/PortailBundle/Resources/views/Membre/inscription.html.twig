@@ -1,0 +1,63 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+
+{% block corp %}
+
+<div id="corp" STYLE="background:#ffffff;">
+
+<br><br><br>
+{% if(message!='')%}
+<center>{{message}}</center>
+{% else %}
+
+<form name="f" action="{{path('SitePortailBundle_inscription')}}" method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<table  border="0" align="center">
+<TR>
+	<TD width=200px>{{ form_label(form.nom) }}:</TD><TD id="form1">{{ form_widget(form.nom) }}</TD><td>{{ form_errors(form.nom) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.prenom) }}: </TD><TD id="form1">{{ form_widget(form.prenom) }}</TD><td>{{ form_errors(form.prenom) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.tel) }}: </TD><TD id="form1">{{ form_widget(form.tel) }}</TD><td>{{ form_errors(form.tel) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.photo) }}: </TD><TD id="form1">{{ form_widget(form.photo) }}</TD><td>{{ form_errors(form.photo) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.email) }}:  </TD><TD id="form1">{{ form_widget(form.email) }}</TD><td>{{ form_errors(form.email) }}</td>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.type) }}:  </TD><TD id="form1">{{ form_widget(form.type) }}</TD><td>{{ form_errors(form.type) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.societe) }}:  </TD><TD id="form1">{{ form_widget(form.societe) }}</TD><td>{{ form_errors(form.societe) }}</td>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.motpasse) }}: </TD><TD id="form1">{{ form_widget(form.motpasse) }}</TD><td>{{ form_errors(form.motpasse) }}</td>
+</tr>
+</script>
+<TR>
+	<TD width=200px>{{ form_label(form.confirme_motpasse) }}:  </TD><TD id="form1">{{ form_widget(form.confirme_motpasse) }}</TD><td>{{ form_errors(form.confirme_motpasse) }}</td>
+</tr>
+<tr>
+	<td colspan=2 align="center">{{ form_widget(form.accepte) }}{{ form_label(form.accepte) }}</td>
+</tr>
+{{ form_rest(form) }}
+<tr>
+	<TD colspan=2 align="center"><INPUT  type="submit" value="Connexion" ></td>
+</TR>
+</form>
+
+
+</table>
+<br><br><br>
+</div>
+
+{% endif %}
+{% endblock %}

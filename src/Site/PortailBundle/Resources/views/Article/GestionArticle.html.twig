@@ -1,0 +1,29 @@
+{% extends "SitePortailBundle:Admin:admin_gestion.html.twig" %}
+{% block gestion %}
+
+<nav id="article12">
+<div  class="menu_div">
+<ul class="menu_ul">
+<li >
+<a href="{{ path('SitePortailBundle_Ajout_article') }}" >Ajouter Article</a>
+</li>
+<li >
+<a href="{{ path('SitePortailBundle_liste_categorie') }}" >Liste Article</a>
+</li>
+
+</ul>
+</div>
+</nav>
+<table>
+<tr>
+<td ><br>{% block contenu %}{% if app.session.hasFlash('enregister_article') %}
+   
+       {{ app.session.flash('enregister_article') }}
+   
+{% endif %}{% endblock %} </td>
+
+</tr>
+</table>
+
+
+{% endblock %}

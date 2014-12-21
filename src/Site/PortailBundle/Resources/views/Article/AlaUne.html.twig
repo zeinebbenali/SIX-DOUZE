@@ -1,0 +1,11 @@
+<table margin-left="10px" ><tr height="100px">
+{% set i=1%}
+{% for art in app.session.get('alaune') %}
+<td valign="top" width="200px" ><DIV style="width:200px;color:#ff0000">{{art.titre|slice(0,50)}}</DIV><a href={{ path('SitePortailBundle_lire_article', { 'id': art.id } ) }}><img  src="{{ asset(art.media)}}"  style="height:100px; width:100px; border-radius:5px; vertical-align:top;"/></a><br>
+{{art.titre|slice(0,150)}}<br>
+<a href={{ path('SitePortailBundle_lire_article', { 'id': art.id } ) }}> LIRE +</a><td>
+{% if(i==3)%}</TR><TR>{% endif %}
+{%set i=i+1 %}
+{% endfor %}
+</tr></table>
+<a href="{{ path('SitePortailBundle_proposer_article') }}" >Proposer votre article</a>

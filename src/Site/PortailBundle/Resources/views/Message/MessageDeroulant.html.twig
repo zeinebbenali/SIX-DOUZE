@@ -1,0 +1,18 @@
+
+<table id="message" >
+<tr>
+<td id="message_lien"> <a href="{{ path('SitePortailBundle_ajout_msg') }}"><img  src="{{ asset('images/msg.gif') }}"/></a></td>
+<td  id="message_marque" width="90%" >
+<marquee behavior="scroll" direction="left" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount',2, 0);" scrollamount="2">
+
+{% for m in app.session.get('messages') %}
+<b> {{ m.nom }} </b>:{{ m.contenu}}
+{% else %}
+Aucun acteur n'a été trouvé.
+{% endfor %}
+
+</marquee>
+</td>
+</tr>
+
+</table>

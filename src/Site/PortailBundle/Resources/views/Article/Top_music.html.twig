@@ -1,0 +1,8 @@
+<marquee behavior="scroll" direction="left" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 2, 0);" scrollamount="2">
+
+{% for a in top_music %}
+<a href={{ path('SitePortailBundle_lire_article', { 'id': a.id } ) }}><img title="{{a.titre}}" style="height:80px; width:80px; border-radius:5px; vertical-align:top;"   src="{{ asset(a.media)}}"/></a>
+
+{% endfor %}
+
+</marquee>

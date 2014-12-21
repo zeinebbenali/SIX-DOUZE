@@ -1,0 +1,31 @@
+{% extends "SitePortailBundle:Portail:layout.html.twig" %}
+
+{% block content %}
+
+
+<div id="corp">
+
+<br><br><br>
+{% if(confirme!='') %}
+<center><h1>{{confirme}}</h1></center>
+{% else %}
+<h1>Mot de passe perdu</h1>
+<table  border="0" align="center">
+<form  action="{{path('SitePortailBundle_motpass_perdu')}}" method="post" >
+
+
+<TR>
+	<TD width=200px>E-mail: </TD><TD><input id="form1" type="text" name="email" ></TD>
+</tr>
+<tr>
+	<TD colspan=2 align="center"><INPUT  type="submit" value="valide" color="blue" onClick="javascript:xxxxxx()" ></td>
+</TR>
+</form>
+
+
+</table>
+<br><br><br>
+</div>
+
+{% endif %}
+{% endblock %}

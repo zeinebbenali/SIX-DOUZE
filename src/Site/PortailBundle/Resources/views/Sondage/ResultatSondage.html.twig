@@ -1,0 +1,20 @@
+{% extends "SitePortailBundle:Sondage:GestionSondage.html.twig" %}
+{% block contenu %}
+<center>
+<br><center><font color="#ff0000"><b><h2><b>La Resultat du  sondage est : </h2></b></font></center><br>
+
+
+<br>
+<br>
+{% for i in sondage %}
+{{ i.question}}
+{% endfor %}
+<br>
+<table>
+{% for i in reponse %}
+     
+	<tr><td>{{ i.reponse }}:</td><td>{{ i.nbr_rep }}</td></tr>
+{% endfor %}
+</table>
+</center>
+{%endblock%} 

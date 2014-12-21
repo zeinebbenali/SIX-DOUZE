@@ -1,0 +1,30 @@
+<div id="commentaire">
+<form action="{{path('SitePortailBundle_ajout_commentaire')}}"method="post" {{ form_enctype(form) }} > 
+<input type="hidden"  name="id_article" value={{id}}>
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<table  border="0" align="center">
+<tr><td colspan=2 align="center">
+<h3>Ajouter Commentaire</h3>
+</td></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.nom) }}:</TD><TD id="form1">{{ form_widget(form.nom) }}</TD><td>{{ form_errors(form.nom) }}</td>
+</tr>
+
+
+<TR>
+	<TD width=200px>{{ form_label(form.email) }}:  </TD><TD id="form1">{{ form_widget(form.email) }}</TD><td>{{ form_errors(form.email) }}</td>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.commentaire) }}:  </TD><TD id="form1">{{ form_widget(form.commentaire) }}</TD><td>{{ form_errors(form.commentaire) }}</td>
+</tr>
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center"><h3><input id="form2" type="submit" value="Commenter"  ></h3></td>
+</TR>
+</table>
+
+</form>
+</table>
+</div>

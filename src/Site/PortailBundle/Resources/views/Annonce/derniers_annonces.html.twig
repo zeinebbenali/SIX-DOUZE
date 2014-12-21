@@ -1,0 +1,31 @@
+<div style="vertical-align=top;" class="liste">
+<dl >
+<dt><u><font color='#F7993F'>Annonces Auto :</font></u></dt>
+{% for a in app.session.get('anceauto') %}
+<dd><b>{{ a.nature}}:</b>&nbsp;{{a.marque}} &nbsp;{{a.modele}}&nbsp;{{a.prix}}&nbsp;{{a.descri}}&nbsp;</dd>
+{% endfor %}
+</dl>
+
+<hr align="center" width="60%" size="1"/>
+<dl>
+<dt><u><font color='#F7993F'>Annonces Emploi:</font></u></dt>
+{% for a in app.session.get('ancemploi') %}
+<dd><b>{{ a.nature}}:</b>&nbsp;{{ a.secteur}}&nbsp;{{ a.letter|slice(0,20)}}&nbsp;</dd>
+{% endfor %}
+</dl>
+<hr align="center" width="60%" size="1"/>
+<dl>
+<dt><u><font color='#F7993F'>Annonces Immobilier:</font></u></dt>
+{% for a in app.session.get('ancimbl') %}
+<dd><b>{{ a.nature}}:</b>&nbsp;{{ a.type}}{{ a.gouver}}&nbsp;{{ a.surface}}&nbsp;{{ a.prix}}&nbsp;&nbsp;
+</dd>
+{% endfor %}
+</dl>
+<hr align="center" width="60%" size="1"/>
+<dl >
+<dt><u><font color='#F7993F'>Annonces BonCoin:</font></u></dt>
+{% for a in app.session.get('ancbn') %}
+<dd><b>{{ a.nature}}:</b>&nbsp;{{ a.type}}&nbsp;{{ a.descri}}&nbsp;&nbsp;{{ a.prix}}
+</dd>
+{% endfor %}
+</div>

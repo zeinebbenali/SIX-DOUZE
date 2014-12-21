@@ -1,0 +1,61 @@
+{% extends "SitePortailBundle:Portail:layout.html.twig" %}
+{% block content %}
+
+<div id="corp">
+<br><br> <font color="#008800">{{confirmeAnnonce}}</font><br>
+
+<form action="{{path('SitePortailBundle_ajout_annonce')}}" "method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<input type="hidden"  name="categorie" value="anc_immobl">
+<table  border="0" align="center">
+<tr><td colspan=2 align="center">
+
+</td></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.type) }}: </TD><TD>{{ form_widget(form.type) }}</TD><td>{{ form_errors(form.type) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.nature) }}: </TD><TD>{{ form_widget(form.nature) }}</TD><td>{{ form_errors(form.nature) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.prix) }}: </TD><TD>{{ form_widget(form.prix) }}</TD><td>{{ form_errors(form.prix) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.surface) }}: </TD><TD>{{ form_widget(form.surface) }}</TD><td>{{ form_errors(form.surface) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>
+	{{ form_label(form.tel) }}: </TD>
+	<TD>{{ form_widget(form.tel) }}</TD>
+	<td>{{ form_errors(form.tel) }}</TD>
+</tr>
+
+<TR>
+	<TD width=200px>
+	{{ form_label(form.email) }}:</TD>
+	<TD>{{ form_widget(form.email)}}</TD>
+	<td>{{ form_errors(form.email) }} </TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.govern) }}: </TD><TD>{{ form_widget(form.govern) }}</TD><td>{{ form_errors(form.govern) }}</TD></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.deleg) }}: </TD><TD>{{ form_widget(form.deleg) }}</TD><td>{{ form_errors(form.deleg) }}</TD></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.photo) }}: </TD><TD>{{ form_widget(form.photo) }}</TD><td>{{ form_errors(form.photo) }}</TD>
+</tr>
+<TR>
+	<TD width=200px valign="top">{{ form_label(form.descri) }}: </TD><TD>{{ form_widget(form.descri) }}</TD><td>{{ form_errors(form.descri) }}</TD>
+</tr>
+
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center"><input type="submit" value="envoyer"  ></td>
+</TR>
+</table>
+</form>
+<br><br><br>
+</div>
+
+{% endblock %}

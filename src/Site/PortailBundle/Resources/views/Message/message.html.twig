@@ -1,0 +1,44 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+
+<div id="corp" STYLE="background: #ffffff">
+<br><br><br>
+
+<form action="{{path('SitePortailBundle_ajout_msg')}}"method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<table  border="0" align="center">
+<tr><td colspan=2 align="center">
+<br><center><font color="#ff0000"><b><h2><b>message</h2></b></font></center><br>
+
+
+</td></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.nom) }}:</TD><TD id="form1">{{ form_widget(form.nom) }}</TD><td>{{ form_errors(form.nom) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.prenom) }}: </TD><TD id="form1">{{ form_widget(form.prenom) }}</TD><td>{{ form_errors(form.prenom) }}</td>
+</tr>
+
+
+<TR>
+	<TD width=200px>{{ form_label(form.email) }}:  </TD><TD id="form1">{{ form_widget(form.email) }}</TD><td>{{ form_errors(form.email) }}</td>
+</tr>
+
+	<TD width=200px>{{ form_label(form.tel) }}:  </TD><TD id="form1">{{ form_widget(form.tel) }}</TD><td>{{ form_errors(form.tel) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.message) }}:  </TD><TD id="form1">{{ form_widget(form.message) }}</TD><td>{{ form_errors(form.message) }}</td>
+</tr>
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center"><br><input  type="submit" value="Envoyer"  ></td>
+</TR>
+</table>
+
+</form>
+<br><br><br>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "SitePortailBundle:Admin:admin_gestion.html.twig" %}
+{% block gestion %}
+
+<nav id="article12">
+<div  class="menu_div">
+<ul class="menu_ul">
+<li >
+<a href="{{ path('SitePortailBundle_ajout_sondage')}}" >Ajouter Sondage</a>
+</li>
+<li >
+<a href="{{ path('SitePortailBundle_resultat_sondage')}}" >Consulter Sondage</a>
+</li>
+</ul>
+</div>
+</nav>
+<table>
+<tr>
+<td><br>{% block contenu %}
+{%if(enregister_sondage!='')%}
+
+{{enregister_sondage}}
+ {% endif %}
+{% endblock %} </td>
+
+</tr>
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "SitePortailBundle:NewsLetters:gestion_newsletters.html.twig" %}
+{% block contenu %}
+<br><center><font color="#ff0000"><b><h2><b>{{message}}</h2></b></font></center><br>
+
+<br><br>
+<center>
+{% if app.session.hasFlash('message') %}
+    <div class="flash-notice">
+        {{ app.session.flash('message') }}
+    </div>
+{% endif %}
+<table  class="gestion">
+<tr>
+
+<th>email</th>
+<th></th>
+
+</tr>
+{% for l in pagerfanta.currentPageResults%}
+<tr>
+
+<td>{{ l.email}}</td>
+<td><a href="{{ path('SitePortailBundle_Admin_delet_InscriNl', { 'email': l.email }) }}">Supprimer</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun acteur n'a été trouvé.</td>
+</tr>
+{% endfor %}
+{{ pagerfanta(pagerfanta,'default_translated',{'routeName': 'SitePortailBundle_gestion_NewsLetters_liste'}) }}
+</table>
+</center>
+{%endblock%} 

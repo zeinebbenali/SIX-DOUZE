@@ -1,0 +1,44 @@
+{% extends "SitePortailBundle:Sondage:GestionSondage.html.twig" %}
+{% block contenu %}
+
+
+<br>
+<br><center><font color="#ff0000"><b><h2><b>vous voulez vraiment changer le sondage actuelle ?? </h2></b></font></center><br>
+<br>
+
+<br>
+<center>
+<table class="gestion_edit">
+{% if app.session.hasFlash('enregister_sondage') %}
+   
+       {{ app.session.flash('enregister_sondage') }}
+   
+{% endif %}
+<form action="{{ path('SitePortailBundle_ajout_sondage')}}" method="post" name="f">
+{% if(m=='')%}
+<input type="hidden" name="etap" value="1">
+<input type="hidden" name="nbr" value="nbr">
+
+<tr><td>Question :</td><td id="form1"><input type="text" name="question"></td></tr>
+
+<tr><td>nbr de question : </td><td id="form1"><input type="text" name="nbr" ></td></tr>
+
+<tr><td colspan=2 id="form2"><br><input type="submit" value="valider"></td></tr>
+{% else %}
+<input type="hidden" name="etap" value="2">
+<input type="hidden" name="nbr" value="{{nbr}}">
+
+Question :{{question}}
+
+
+
+{% for i in 1..nbr %}
+     
+	<tr><td>reponse {{ i}}: </td><td id="form1"><input type="text" name="{{i}}" ></td></tr>
+{% endfor %}
+<tr><td id="form2"><input type="submit" value="valider"></td></tr>
+{% endif %}
+</form>
+</table>
+</center>
+{%endblock%} 

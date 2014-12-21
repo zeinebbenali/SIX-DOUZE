@@ -1,0 +1,30 @@
+{% extends "SitePortailBundle:Admin:gerer_admin.html.twig" %}
+{% block contenu %}
+<center>
+<br><center><font color="#ff0000"><b><h2><b>Ajouter un nouvel Administrateur</h2></b></font></center><br>
+{{m}}
+<br>
+<br>
+<center>
+<table align="center" class="gestion_edit">
+<form id="form1" action="{{ path('SitePortailBundle_ajout_admin') }}" method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<tr><td>{{ form_label(form.nom) }}:</td></tr>
+<tr><td id="form1">{{ form_widget(form.nom) }}</td></tr>
+<tr><td>{{ form_label(form.login) }}:</td></tr>
+<tr><td id="form1">{{ form_widget(form.login) }}</td></tr>
+<tr><td>{{ form_label(form.motpasse) }}:</td></tr>
+<tr><td id="form1">{{ form_widget(form.motpasse) }}</td></tr>
+<tr><td>{{ form_label(form.confirme_motpasse) }}:</td></tr>
+<tr><td id="form1">{{ form_widget(form.confirme_motpasse) }}</td></tr>
+{{ form_rest(form) }}
+<tr><td id="form2"><br><input type="submit" value="valider"></td></tr>
+
+</form>
+
+</table>
+</center>
+{%endblock%} 

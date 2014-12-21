@@ -1,0 +1,26 @@
+{% if (app.session.get('type')=='membre') %} 
+<table><tr><td>
+	<img align="left" src="{{ asset('images/profil.gif') }}" height="100px" width="80px"  /></td>
+	<td align="center">
+	nom:{{app.session.get('nom')}}<br>
+
+<a href="{{ path('SitePortailBundle_edit_membre', { 'id': app.session.get('id') }) }}" >Edit Profil </a></td></tr></table><br>
+<div id="bouton"><a  href="{{ path('SitePortailBundle_deconnexion')}}" >Deconnexion </a></div>
+
+
+{% else %}
+{% for key, flash in app.session.getFlashes() %}
+{{ flash }}
+{% endfor %}
+<form action="{{ path('SitePortailBundle_connexion') }}" method="post" >
+			  <table >
+<TR><TD >E_mail: </TD><TD><input id="form" type="text" name="email" ></TD></tr>
+<TR><TD>Mot de passe:</TD><TD><input id="form" type="password" name="pwd"></TD></tr>
+
+</table>
+	    <input type="submit" value="Connexion" color="blue">
+             </form>
+			 <form action="{{ path('SitePortailBundle_inscription') }}" >
+	    <input type="submit"  value="inscription"><a href="{{path('SitePortailBundle_motpass_perdu')}}">ou mote de passe oublier</a>
+             </form>
+{%endif%}	

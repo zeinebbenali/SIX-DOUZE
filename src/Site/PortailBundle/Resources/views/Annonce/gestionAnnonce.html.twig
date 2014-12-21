@@ -1,0 +1,30 @@
+{% extends "SitePortailBundle:Admin:admin_gestion.html.twig" %}
+{% block gestion %}
+
+<nav id="article12">
+<div  class="menu_div">
+<ul class="menu_ul">
+<li style="margin-left:5px;">
+<a href="{{ path('SitePortailBundle_liste_annonce', { 'categorie':'emploi' }) }}" >Annonce Emploie</a>
+</li>
+<li style="margin-left:5px;">
+<a href="{{ path('SitePortailBundle_liste_annonce', { 'categorie':'auto' }) }}" >Annonces Auto</a>
+</li>
+<li style="margin-left:5px;">
+<a href="{{ path('SitePortailBundle_liste_annonce', { 'categorie':'imobl' }) }}" >Annonces Immobile</a>
+</li>
+<li style="margin-left:5px;">
+<a href="{{ path('SitePortailBundle_liste_annonce', { 'categorie':'anc_bncoin' }) }}" >Annonces BonCoin</a>
+</li>
+</ul>
+</div>
+</nav>
+<table>
+<tr>
+<td><br>{% block contenu %}{% endblock %} </td>
+
+</tr>
+</table>
+
+
+{% endblock %}

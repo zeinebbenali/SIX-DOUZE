@@ -1,0 +1,61 @@
+﻿<HTML lang="ar" >
+<HEAD>
+<meta http-equiv="Content-Type"  charset=UTF-8">
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+<tiltle></title>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=220754014651701";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/bouton.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/index.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
+			<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="{{ asset('js/AC_RunActiveContent.js')}}" language="javascript"></script>
+			<script type="text/javascript" src="{{ asset('js/date_heure.js')}}"></script>
+			<link rel="stylesheet" type="text/css" href="{{ asset('engine1/style.css')}}" />
+	<script type="text/javascript" src="{{ asset('engine1/jquery.js')}}"></script>
+			
+{% endblock %}
+</head>
+<body >
+<div id="fb-root"></div>
+<div id="container">
+<div id="header" >
+
+<table>
+<tr>
+<td id="logo" >
+<a href="{{ path('SitePortailBundle_homepage') }}">
+<img  src="{{ asset('images/logo.png') }}"   /></a>
+</td>
+<td id="pub">
+
+<OBJECT  height="100%" width="100%">
+  <EMBED height="100%" width="100%"  src="{{ asset('images/banniere.png') }}">
+  </EMBED>
+ </OBJECT>
+</td>
+<td id="horloge">
+ <span id="date_heure"></span><script type="text/javascript">window.onload = date_heure('date_heure');</script>
+</td>
+</tr>
+</table>
+
+<div id="nav" class="nav">
+{% include "SitePortailBundle:Portail:bout.html.twig" %}
+</div>
+</div>
+<div id="corp">{% block content %}{% endblock %}</div>
+<div id="footer">
+{% include "SitePortailBundle:Portail:footer.html.twig" %}
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+<center>
+<div id="corp" STYLE="background: #ffffff">
+<br><br> 
+<table width="100%"  padding="50px" align="center"><tr><td align="center" width="50%">
+<div>
+<fieldset  style="border-collapse: collapse;width:300px; padding: 0.5em;border: 1px solid #ff0505;">
+
+	<legend><b><font color="#ff0505" size="4">Connexion</font></b></legend>
+
+	<form action="{{ path('SitePortailBundle_connexion') }}" method="post" >
+			  <table >
+<TR><TD >E_mail: </TD><TD><input id="form" type="text" name="email" ></TD></tr>
+<TR><TD>Mot de passe:</TD><TD><input id="form" type="password" name="pwd"></TD></tr>
+
+</table>
+	    <input type="submit" value="Connexion" color="blue"><a href="{{path('SitePortailBundle_motpass_perdu')}}">ou mote de passe oublier</a>
+             </form>
+</fieldset></div></td>
+<td align="center" width="50%"> <form action="{{ path('SitePortailBundle_inscription') }}" >
+	    <input STYLE="margin:30px 5px;float:left;display:block;height:50px;width:60%;border-radius:18px;text-align:center;background:#E60000;	
+	background: -moz-linear-gradient(0% 75% 90deg,#CC0000, #FF6666);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC0000), to(#FF6666));font-size:200%;color:#000000;text-decoration:none;" type="submit"  value="inscription">
+             </form></td></tr></table>
+<br><br>
+</center>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+<div id="newsletter" >
+	&nbsp	Newsletter:
+	
+{% if app.session.hasFlash('enregister_abonne') %}
+   
+       {{ app.session.flash('enregister_abonne') }}
+   
+{% endif %}
+	<form  action="{{path('SitePortailBundle_ajoutNL')}}" method="post">
+	&nbsp
+	<input id="form" type="text"  name="email">
+	<input type="submit"  value="Valider">
+	
+	</form>
+	<hr>
+	&nbsp Suivez-nous: &nbsp 
+	<a href="">
+<img style="padding-left:7px;width:35px;height:35px;" src="{{ asset('images/fb.png') }}"   /></a>
+<a href="">
+<img style="padding-left:7px;width:35px;height:35px;" src="{{ asset('images/twitter.png') }}"   /></a>
+	</div>

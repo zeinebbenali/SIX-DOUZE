@@ -1,0 +1,410 @@
+body{
+background-image:url(../images/head1.jpg);
+font-family: "Segoe UI",Calibri,"Myriad Pro",Myriad,"Trebuchet MS",Helvetica,Arial,sans-serif;
+width: 100%;
+  height:100%;
+  
+}
+#container
+ {
+ 
+ width: 1000px;
+ vertical-align: middle;
+  margin-left: 130px;
+
+
+box-shadow: #999 0px 10px 10px 10px;
+-moz-box-shadow: #999 0px 10px 10px 10px;
+-webkit-box-shadow: #999 0px 10px 10px 10px;
+background-color:#eaeaea;
+
+ border-radius:0px 0px 20px 20px;
+
+ }
+#header
+{
+background-image:url(../images/head.jpg);
+  height: 230px;
+  width: 100%;
+  
+  
+margin-bottom:0px;
+  }
+  #header table
+  {
+  vertical-align:top;
+ 
+   width: 100%;
+  
+	margin-bottom:0px;
+  }
+#logo{
+vertical-align: left;
+
+}
+
+
+ #logo img
+ { 
+
+ height:125px;
+ width:125px;
+ 
+margin-top:15px;
+margin-left:15px;
+
+
+
+}
+#pub2 th
+ { color: #FFFF00;
+border-bottom: solid #FFFF00 1px;
+border-left: solid #FFFF00 3px;
+ }
+
+#pub
+ { 
+ background:#000000;
+
+width:60%;
+ 
+
+
+}
+
+#horloge
+ {
+
+vertical-align:bottom;
+margin-bottom:0;
+
+}
+#corp
+{
+margin-top:0px;
+ width:100%;
+ vertical-align:top; 
+}
+
+#content
+ {
+vertical-align:top;
+ position: relative; 
+ margin-left:100px;
+ 
+ }
+ 
+#nav
+{
+
+width: 100%;
+height: 30px;
+
+margin:0;
+ vertical-align:top;
+}
+#message
+{
+vertical-align:top;
+background-color:#ffffff;
+height:25px;
+
+
+}
+
+#message_lien img
+{
+height:25px;
+width:100px;
+}
+	
+
+#annonce-site
+{
+width:100%;
+height:25px;
+margin-top:0px;
+
+
+text-align:center;
+
+}
+#annonce-site th
+{
+color:#ffffff;
+background:#E60000;	
+	background: -moz-linear-gradient(0% 75% 90deg,#CC0000, #FF6666);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CC0000), to(#FF6666));
+height:30px;
+margin-top:5px;
+
+padding:5px;
+border-radius:8px 8px 8px 8px;
+
+}
+#annonce-site td
+{
+ width:100%;
+background-color:#ffffff;
+
+}
+#cont_article
+{ 
+  left:0;
+  vertical-align:top;
+  height: 180px;
+  width: 330px;
+  
+  margin-top:0px;
+
+}
+#modulefb
+{ vertical-align:top;
+  left:0;
+  background:#ffffff;
+  height: 400px;
+  width: 300px;
+ 
+margin-left:5px;
+
+  }
+#pub2
+ { 
+
+vertical-align:top;
+width:330px;
+height:400px;
+ 
+
+}
+
+
+#cnx_ins
+{vertical-align:top;
+  right:0;
+  background-image:url(../images/head.jpg);
+  height: 160px;
+  width:100%;
+ 
+  box-shadow: 2px 2px 2px #888888;
+  margin-top:5px;
+
+}
+#form_newsletter
+{
+}
+#newsletter
+{vertical-align:top;
+  right:0;
+  background-image:url(../images/head.jpg);
+  height:125px;
+  width:100%;
+  border-radius:5px;
+  box-shadow: 2px 2px 2px #888888;
+  margin-top:5px;
+
+}
+#crer_annonce 
+{
+  
+ vertical-align:top;
+   height:100px;
+  width:100%
+  border-radius:5px;
+  box-shadow: 2px 2px 2px #888888;
+
+}
+#box
+{vertical-align:top;
+  right:0;
+  
+  height:100%;
+  width: 100%;
+ 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: whiteSmoke;
+background: -moz-linear-gradient(top, #FAFAFA 0%, whiteSmoke 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,whiteSmoke));
+background: -webkit-linear-gradient(top, #FAFAFA 0%,whiteSmoke 100%);
+background: -o-linear-gradient(top, #FAFAFA 0%,whiteSmoke 100%);
+background: -ms-linear-gradient(top, #FAFAFA 0%,whiteSmoke 100%);
+background: linear-gradient(top, #FAFAFA 0%,whiteSmoke 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#f5f5f5',GradientType=0 );
+box-shadow: 0 1px 2px #F1F1F1;
+
+
+clear: both;
+display: block;
+ 
+}
+#box th
+{
+
+
+ height:20px;
+  padding: 0 12px;
+font-size: 18px;
+/*color: #EB0000;*/
+/*border-bottom: solid #FF5B5B 3px;*/
+/*border-left: solid #FF5B5B 3px;*/
+background-image:url(../images/box.jpg);
+letter-spacing: -0.03em;
+margin-top: -5px;
+text-align:left;
+
+}
+#box td 
+{
+background-color: #ffffff;
+height:100%;
+
+}
+ #sondage th {
+ color: #FF3300;
+border-bottom: solid #FF3300 1px;
+border-left: solid #FF3300 3px;
+ }
+#sondage
+{vertical-align:top;
+  left:0;
+  
+  height:225px;
+  width: 350px;
+ 
+ }
+ #film th {
+ color: #FF1975;
+border-bottom: solid #FF1975 1px;
+border-left: solid #FF1975 3px;
+ }
+#film .liste
+{  
+overflow-y: scroll;
+}
+
+#film
+ { vertical-align:top;
+   left:0;
+
+
+vertical-align: center;
+width:315px;
+height:520px;
+
+margin-left:5px;
+  
+
+}
+#documentaire th
+{
+ color: #3366CC;
+border-bottom: solid #3366CC 1px;
+border-left: solid #3366CC 3px;
+}
+#documentaire
+ {   left:0;
+vertical-align:top;
+
+vertical-align: center;
+width:315px;
+height:520px;
+ 
+
+
+}
+#documentaire .liste
+{  
+overflow-y: scroll;
+}
+#tag
+ { vertical-align:top;
+background-color: #ffffff;
+vertical-align: center;
+width:350px;
+height:350px;
+ 
+}
+#top_music th
+{  color: #9900CC;
+border-bottom: solid #9900CC 1px;
+border-left: solid #9900CC 3px;}
+
+#top_music
+{ vertical-align:top;
+  left:0;
+ 
+  height: 170px;
+  width: 350px;
+  
+
+}
+#annonces th
+{
+color: #858566;
+border-bottom: solid #858566 1px;
+border-left: solid #858566 3px;
+}
+#annonces
+{ vertical-align:top;
+  left:0;
+
+  height: 600px;
+  width: 350px;
+}
+#alaune th
+{
+ color: #33AD5C;
+border-bottom: solid 	#33AD5C 1px;
+border-left: solid 	#33AD5C 3px;
+}
+#alaune
+{ vertical-align:top;
+  left:0;
+
+  height: 600px;
+  width: 641px;
+ 
+  margin: 0px;
+ 
+}
+#article
+{ vertical-align:top;
+  left:0;
+  
+  height: 500px;
+  width: 990px;
+ 
+ 
+
+}
+ #footer
+ {
+ /*width: 1000px;
+ background-color: rgb(0, 0, 0);   /*------je donne un fond solide par sécurité pour les navigateurs qui ne reconnaissent pas la transparence-----*/
+/*background-color: rgba(0, 0, 0, 0.5); 
+ margin-bottom:90%;*/
+ background:#ffffff;
+  height: 140px;
+  width: 1000px;
+border-radius:0px 0px 20px 20px;
+  box-shadow: 2px 2px 2px #888888;
+  margin: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+#bouton a {
+width:200px;
+height:50px;
+font-size:1em;
+padding: 5px 10px;
+border:none;
+
+background:#1f2026;
+border-radius:8px;
+margin-left:10px;
+text-decoration:none;
+color:#FAFAFA;
+background:#343640;
+}

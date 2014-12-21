@@ -1,0 +1,44 @@
+#gestion
+{ 
+  left:0;
+  background:#ffffff;
+  height: 650px;
+  width: 770px;
+ border-radius:0px 20px 20px 0px;
+  margin:10px;
+  margin-top:-1;
+}
+
+.gestion{
+width:100%;
+border-collapse:collapse;
+margin-left:50px;
+margin-right:5px;
+float:center;
+border:2px solid #999999;
+}
+
+.gestion tr td{
+border:1px solid #999999;
+}
+table.gestion th 
+{
+background-color:#F3F3F3;
+
+padding-right:5px;
+border:1px solid #999999;
+}
+.gestion td 
+{
+padding-right:5px;
+}
+
+table.gestion_edit{
+
+float:center;
+
+padding-top:10px;
+}
+
+.liste td
+{overflow-y: scroll;}

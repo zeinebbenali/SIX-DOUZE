@@ -1,0 +1,44 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+
+<div id="corp" STYLE="background: #ffffff">
+<br><br><br>
+{% if(message!='')%}
+<center>{{message}}</center>
+{% else %}
+<form action="{{path('SitePortailBundle_contact')}}" method="post" {{ form_enctype(form) }} onsubmit="return verif()" > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<table  border="0" align="center" >
+<tr><td colspan=2 align="center">
+<h3>Contact</h3>
+</td></tr>
+<TR>
+	<TD >{{ form_label(form.nom) }}:</TD><TD id="form1">{{ form_widget(form.nom) }}</TD><td>{{ form_errors(form.nom) }}</td>
+</tr>
+<TR>
+	<TD >{{ form_label(form.prenom) }}: </TD><TD  id="form1">{{ form_widget(form.prenom) }}</TD><td>{{ form_errors(form.prenom) }}</td>
+</tr>
+
+
+<TR>
+	<TD >{{ form_label(form.email) }}:  </TD><TD  id="form1">{{ form_widget(form.email) }}</TD><td>{{ form_errors(form.email) }}</td>
+</tr>
+
+	<TD >{{ form_label(form.objet) }}:  </TD><TD  id="form1">{{ form_widget(form.objet) }}</TD><td>{{ form_errors(form.objet) }}</td>
+</tr>
+<TR>
+	<TD >{{ form_label(form.message) }}:  </TD><TD id="form1">{{ form_widget(form.message) }}</TD><td>{{ form_errors(form.message) }}</td>
+</tr>
+{{ form_rest(form) }}
+<tr>
+	<TD colspan="2" align="center"><input type="submit" value="Envoyer"  ></td>
+</TR>
+</table>
+</form>
+<br><br><br>
+</div>
+{% endif %}
+{% endblock %}

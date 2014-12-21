@@ -1,0 +1,21 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+<img  src="{{ asset(anc.photo)}}">
+<table class="gestion">
+<tr>
+<tr><td>type</td><td>{{ anc.type }}</td></tr>
+<tr><td>nature</td><td>{{ anc.nature }}</td></tr>
+<tr><td>date</td><td>{{ anc.date}}</td></tr>
+<tr><td>prix</td><td>{{ anc.prix}}</td></tr>
+<tr><td>surface</td><td>{{ anc.surface}}</td></tr>
+<tr><td>gouvernourat</td><td>{{ anc.gouver}}</td></tr>
+
+<tr><td>email</td><td>{{ anc.email}}</td></tr>
+<tr><td>id admin</td><td>{{ anc.id_admin}}</td></tr>
+<tr><td>id membre</td><td>{{ anc.id_mbr}}</td></tr>
+<tr><td><img src="asset('anc.photo')"/></td></tr>
+
+
+</tr>
+</table>
+{% endblock %}

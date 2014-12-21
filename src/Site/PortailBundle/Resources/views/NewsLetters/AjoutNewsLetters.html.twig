@@ -1,0 +1,40 @@
+{% extends "SitePortailBundle:NewsLetters:gestion_newsletters.html.twig" %}
+{% block contenu %}
+
+<div >
+<br><br>
+{% if app.session.hasFlash('enregister_abonne') %}
+   
+       <font color="red"> {{ app.session.flash('enregister_abonne') }}</font>
+   
+{% endif %}
+<br>
+
+<form id="form1" action="{{path('SitePortailBundle_NewsLetters_ajout')}}" method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+
+<table  class="gestion_edit">
+<tr><td colspan=2 align="center">
+
+</td></tr>
+<TR>
+	<TD >{{ form_label(form.titre) }}: </TD><TD>{{ form_widget(form.titre) }}</TD><td>{{ form_errors(form.titre) }}
+</TD>
+</tr>
+
+<TR>
+	<TD >{{ form_label(form.newsletters) }}:</TD><TD>{{ form_widget(form.newsletters) }}</TD><td>{{ form_errors(form.newsletters) }}</TD>
+</tr>
+
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center" id="form2"><input type="submit" value="envoyer"  ></td>
+</TR>
+</table>
+</form>
+<br><br><br>
+</div>
+
+{% endblock %}

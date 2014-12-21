@@ -1,0 +1,24 @@
+{% extends "SitePortailBundle:Admin:admin_gestion.html.twig" %}
+{% block gestion %}
+
+<nav id="article12">
+<div  class="menu_div">
+<ul class="menu_ul">
+<li >
+<a href="{{ path('SitePortailBundle_gerer_message_new') }}" >Les nouvelles Messages</a>
+</li>
+<li >
+<a href="{{ path('SitePortailBundle_gerer_message_list') }}" >toutes les Messages </a>
+</li>
+</ul>
+</div>
+</nav>
+<table>
+<tr>
+<td><br>{% block contenu %}{% endblock %} </td>
+
+</tr>
+</table>
+
+
+{% endblock %}

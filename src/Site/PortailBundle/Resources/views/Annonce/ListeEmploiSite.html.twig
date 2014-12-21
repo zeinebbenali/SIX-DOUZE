@@ -1,0 +1,35 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+<div id="corp" STYLE="background:#ffffff;" >
+<center><br>
+ <center><b>La Liste des {{type}} Annonces Emploi</b></center><br> <br>
+<table style="padding:10px;border-radius:6px;width:100%;" cellspacing="10">
+<tr style="padding:10px;background-color:#EBEBFF;">
+<th>nature</th>
+<th>date</th>
+
+<th>letter</th>
+<th>secteur</th>
+
+<th>Afficher</th>
+
+</tr>
+{% for anc in annonces %}
+<tr >
+<td>{{ anc.nature }}</td>
+<td>{{ anc.date}}</td>
+<td>{{ anc.letter}}</td>
+<td>{{ anc.secteur}}</td>
+<td><a href="{{ path('SitePortailBundle_lire_annonce', { 'id': anc.id ,'categorie':'anc_emploi'}) }}">Affiche</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun annonces n'a été trouvé.</td>
+</tr>
+{% endfor %}
+</table>
+</center>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+<div id="corp" STYLE="background:#ffffff;" >
+<table width="80%" style="margin-left:50px;"  align="justify">
+<tr> <td colspan=2 style="color:#FF0000"><h2 >{{article.titre}}</h2></td></tr>
+<tr><td style="float:right;vertical-align:top;"><img style="height:100px; width:100px;" src="{{ asset(article.media)}}"/></td>
+<td><div style="float:left;vertical-align:top;">{{article.contenu}}</div></td></tr>
+<tr><td>{% if(article.lien!="")%}
+<iframe width="560" height="315" src="{{ asset(article.lien)}}" frameborder="0" allowfullscreen></iframe>{% endif %}</td></tr>
+</table><br><br>
+<table style="height:100px; width:400px; float:center; margin-left:50px;" cellspacing="10">
+{% for comment in commentaire %}
+<tr ><td valign="top"><b>{{comment.nom}}</b>:</td><td style="padding:10px;background-color:#EBEBFF;border-radius:6px;">{{comment.commentaire}}<br>{{comment.date|date("m/d/Y") }}
+</td></tr><br>
+
+{% endfor %} </table>
+<hr>
+{% include 'SitePortailBundle:Commentaire:AjoutCommentaire.html.twig' with {'id':article.id} %}
+<hr>
+
+{% endblock %}

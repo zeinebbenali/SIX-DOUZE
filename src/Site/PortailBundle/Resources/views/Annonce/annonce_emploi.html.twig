@@ -1,0 +1,39 @@
+{% extends "SitePortailBundle:Portail:layout.html.twig" %}
+{% block content %}
+
+<div id="corp">
+<br><br>{{ confirmeAnnonce }}<br>
+
+<form action="{{path('SitePortailBundle_ajout_annonce')}}" method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<input type="hidden"  name="categorie" value="anc_emploi">
+<table  border="0" align="center">
+<tr><td colspan=2 align="center">
+
+</td></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.nature) }}: </TD><TD>{{ form_widget(form.nature) }}</TD><td>{{ form_errors(form.nature) }}
+</TD>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.letter) }}:</TD><TD>{{ form_widget(form.letter) }}</TD><td>{{ form_errors(form.letter) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.cv) }}:</TD><TD>{{ form_widget(form.cv) }}</TD><td>{{ form_errors(form.cv) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.secteur) }}:</TD><TD>{{ form_widget(form.secteur) }}</TD><td>{{ form_errors(form.secteur) }}</TD>
+</tr>
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center"><input type="submit" value="envoyer"  ></td>
+</TR>
+</table>
+</form>
+<br><br><br>
+</div>
+
+{% endblock %}

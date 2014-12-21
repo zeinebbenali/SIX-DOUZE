@@ -1,0 +1,19 @@
+{% if app.session.hasFlash('enregister_reponse') %}
+   
+       <font color="#d10707">{{ app.session.flash('enregister_reponse') }}</font>
+   
+{% endif %}
+
+{% for i in app.session.get('sondage') %}
+<p><strong>{{ i.question}}?</strong></p>
+{% endfor %}
+<form action="{{ path('SitePortailBundle_repondre_sondage')}}" method="post">
+
+
+{% for i in app.session.get('reponse') %}
+ <input type="radio" name=reponse value="{{i.reponse}}">{{i.reponse}}<br>
+{% endfor %}
+
+<a  href="#" ><font color="#d10707">Resultat de sondage</font></a><div id="form2"  style="float:right;margin-right:20px;"> <input style="background-color:#d10707;"type="submit" value="valider"/></div>
+</form>
+

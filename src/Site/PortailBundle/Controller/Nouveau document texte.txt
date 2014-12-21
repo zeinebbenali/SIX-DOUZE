@@ -1,0 +1,9 @@
+$session = $this->get('session'); 
+$session->set('user', $member->getName()); 
+then read it from the session and pass it to your controller like 
+this: 
+$username = $session->get('user'); 
+or fetch it directly in the template: 
+{% if app.session.has('user') %} 
+welcome {{ app.session.get('user') }} 
+{% endif %} 

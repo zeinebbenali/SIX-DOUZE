@@ -1,0 +1,53 @@
+{% extends "SitePortailBundle:Annonce:gestionAnnonce.html.twig" %}
+{% block contenu %}
+<center>
+<br><center><font color="#ff0000"><b><h2><b>La Liste des Annonces Imobiller</h2></b></font></center><br>
+<br>
+
+<table class="gestion">
+<th>
+<td>type</td>
+
+<td>nature</td>
+<td>date</td>
+<td>prix</td>
+<td>surface</td>
+<td>gouvernourat</td>
+
+<td>email</td>
+<td>id admin</td>
+<td>id membre</td>
+<td>Afficher</td>
+<td>Valider</td>
+<td>Supprimer</td>
+</th>
+{% for anc in pagerfanta.currentPageResults %}
+<tr>
+
+<td>{{ anc.type }}</td>
+<td>{{ anc.nature }}</td>
+
+<td>{{ anc.date}}</td>
+<td>{{ anc.prix}}</td>
+<td>{{ anc.surface}}</td>
+<td>{{ anc.gouver}}</td>
+
+<td>{{ anc.email}}</td>
+<td>{{ anc.id_admin}}</td>
+<td>{{ anc.id_mbr}}</td>
+<td><a href="{{ path('SitePortailBundle_affiche_annonce', { 'id': anc.id,'categorie':'imobl'}) }}">Affiche</a></td>
+<td>{% if(anc.valide=="n") %}<a href="{{ path('SitePortailBundle_valide_annonce', { 'id': anc.id,'categorie':'imobl'}) }}">Valider</a>{% endif %}</td>
+
+
+<td><a href="{{ path('SitePortailBundle_supprime_annonce', { 'id': anc.id,'categorie':'imobl' }) }}">Supprimer</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun message n'a été trouvé.</td>
+</tr>
+{% endfor %}
+{{ pagerfanta(pagerfanta,'default_translated',{'routeName': 'SitePortailBundle_liste_annonce'}) }}
+</table>
+</center>
+{%endblock%} 

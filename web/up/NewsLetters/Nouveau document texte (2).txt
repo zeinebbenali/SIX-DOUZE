@@ -1,0 +1,97 @@
+class Upload
+{
+private $Fichier ='';
+private $Nom ='';
+private $Type ='';
+private $Repertoire ='';
+private $Temp ='';
+private $TypesValides = array();
+private $Erreur ='';
+
+public
+function __construct($Fichier)
+{
+$this->Temp = $_FILES[$Fichier]['tmp_name'];
+$this->Nom = $_FILES[$Fichier]['name'];
+$this->Type =$_FILES[$Fichier]['type'];
+
+}
+
+public
+function TypesValides($TypesValides)
+{
+$this->TypesValides = $TypesValides;
+} 
+
+public
+function UploadFichier($Repertoire='./')
+{
+$this->Repertoire = $Repertoire;
+
+if(!is_uploaded_file($this->Temp))
+{
+return false;
+$this->Erreur='Vous avez rien uploader';
+}
+
+else if(in_array($this->Type,$this->TypesValides))
+{
+return false;
+$this->Erreur= 'Le fichier '.$this->Nom.' n\'est pas d\'un type valide';
+}
+
+elseif(!move_uploaded_file($this->Temp, $this->Repertoire.$this->Nom))
+{
+return false;
+$this->Erreur='Impssible de copier le fichier '.$this->Nom;
+}
+elseif return true;
+}
+
+public
+function UploadErreur()
+{
+return this->Erreur='Vous avez rien uploader';
+}
+
+public
+function ChangeNom($Nom)
+{
+$this->Nom=$Nom;
+} 
+
+public
+function RetournerType()
+{
+return($this->Nom);
+} 
+
+public
+function RetournerNom()
+{
+return($this->Type);
+} 
+
+public
+function __toString()
+{
+return($this->Nom);
+}
+}
+
+//Utilisation :
+
+if(isset($_FILES['Fichier']))
+{
+//Instantiation d'un objet pour un nouveau fichier
+
+$ObjFichier = new upload($_FILES['Fichier']);
+
+//Choix des types de fichiers possibles
+
+$ObjFichier->TypesValides = array('image/jpeg','image/png','image/gif');
+
+//Upload du fichier et choix du répertoire de destination
+
+$ObjFichier->UploadFichier('repertoire/') or die($ObjFichier->UploadErreur());
+}

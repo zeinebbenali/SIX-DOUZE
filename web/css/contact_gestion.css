@@ -1,0 +1,34 @@
+.menu
+{
+margin-left:0px;
+
+text-align: center;
+list-style-type: none; 
+margin-left:10;
+margin: center;         
+padding: 0;             
+}
+
+
+.menu li a:hover {
+background: #2f2f2f;
+}
+.menu li a {
+background: #2f2f2f;
+display: block;        
+color: #FFFFFF;        
+margin: 0;                                /*------mettre tout le monde d'accord--------*/              
+text-decoration: none;               
+height: 30px;
+}
+
+
+.menu  li            /*------uniquement pour la liste de premier niveau-------*/
+{
+list-style: none;
+border: 1px solid #FFFFFF;
+float: left;       
+width: 200px; 
+height: 30px;             
+padding: 0;
+}

@@ -1,0 +1,110 @@
+{% extends "SitePortailBundle:Portail:layout.html.twig" %}
+{% block content %}
+
+<div id="corp">
+
+
+{% include "SitePortailBundle:Annonce:AnnonceDeroulant.html.twig" %}
+<hr>{% block corp %}
+<table >
+<TR >
+
+<TD valign="top">{% include "SitePortailBundle:Message:MessageDeroulant.html.twig" %}
+    <table style="width:100%;height:400px"> 
+    <tr ><td >
+	<div  id="crer_annonce">
+	<table id="box">
+	<tr><th>
+	Recherche</th></tr>
+	<tr ><td>{% include "SitePortailBundle:Recherche:Recherche.html.twig" %}</td></tr>
+     </table>
+	   </div>
+	</TD></tr>
+	<tr style="margin-top:-1;"><td>
+	 {% include "SitePortailBundle:AbonneNewsLetters:inscriNewsLetters.html.twig" %} 
+	
+	</TD></tr>
+<tr><td><div id="cnx_ins">
+		 {% include "SitePortailBundle:Membre:connexion.html.twig" %} 
+      </div>
+	</TD></tr>
+	
+	</table>
+	</td>
+	<TD valign="top" id="slide_show">
+	
+	{% include 'SitePortailBundle:Portail:Slide_Show.html.twig'  %} 
+	</TD>
+</TR>
+</table>
+{% endblock %}
+<table style="width:100%;">
+<tr style="width:100%;"><td colspan=2 valign="top">
+<div id="alaune">
+	<table id="box">
+	<tr><th>A la une</th></tr>
+	<tr ><td>{% include "SitePortailBundle:Article:AlaUne.html.twig" %}</td></tr>
+</table>
+	</div></td>
+<td><div id="annonces">
+	<table id="box">
+	<tr><th>
+	LES DERNIERS ANNONCES</th></tr>
+	<tr ><td valign="top" class="liste">{% include "SitePortailBundle:Annonce:derniers_annonces.html.twig" %}</td></tr>
+</table>
+</div></td></tr>
+<tr><td rowspan=2><div id="modulefb"><div class="fb-like-box" data-href="https://www.facebook.com/sixdouze" data-width="300" data-height="400" data-show-faces="true" data-stream="false" data-header="true"></div></div></td>
+<td rowspan=2><div id="pub2">
+	<table id="box">
+	<tr><th>Publicite</th></tr>
+	<tr ><td valign="top">
+
+<OBJECT  height="100%" width="100%">
+  <EMBED height="100%" width="100%"  src="{{ asset('swf/article.swf') }}">
+  </EMBED>
+ </OBJECT></a></td></tr>
+</table>
+	</div></td>
+<td><div id="sondage">
+	<table id="box">
+	<tr><th>
+	Sondage</th></tr>
+	<tr ><td>{% include "SitePortailBundle:Sondage:Sondage.html.twig" %}</td></tr>
+</table>
+	</div></td></tr>
+<tr><td><div id="top_music">
+	<table id="box">
+	<tr><th>
+	Top Oriental</th></tr>
+	<tr ><td>{% include "SitePortailBundle:Article:Top_music.html.twig"  with {'top_music':app.session.get('top_oriental')} %}</td></tr>
+</table>
+	</div></td></tr>
+</table>
+<table>
+<tr><td rowspan=2><div id="film"><table id="box">
+	<tr><th >
+	<b>Film</b></th></tr>
+	<tr ><td class="liste">{% include "SitePortailBundle:Article:Film.html.twig" %}</td></tr>
+</table>
+</div>
+</td>
+<td rowspan=2><div id="documentaire"><table id="box" >
+	<tr><th >
+	<b>Documentaire</b></th></tr>
+	<tr ><td class="liste">{% include "SitePortailBundle:Article:Documentaire.html.twig" %}</td></tr>
+</table>
+</div>
+</td>
+<td><div id="top_music"><table id="box">
+	<tr><th >
+	<b>Top Occidental</b></th></tr>
+	<tr ><td >{% include "SitePortailBundle:Article:Top_music.html.twig" with {'top_music':app.session.get('top_occidental')} %}</td></tr>
+</table></div></td></tr>
+<tr><td>
+<div id="tag">
+
+ </div>
+ </td></tr>
+</table>
+
+{% endblock %}

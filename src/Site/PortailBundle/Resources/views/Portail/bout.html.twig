@@ -1,0 +1,78 @@
+﻿
+
+<nav id="article12" >
+ <div class="menu_div">
+<ul class="menu_ul">
+<li><a href="{{ path('SitePortailBundle_homepage') }}">Accueil</a>
+
+</li>
+<li><a>Actualites</a>
+<ul>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'news national' })}}">Actualites Nationales</a></li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'news international' })}}">Actualites Internationales</a></li>
+
+</ul>
+</li>
+<li><a>Sports</a>
+<ul>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'sport national' })}}">Sports Nationals</a></li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'sport international' })}}">Sports Internationals</a></li>
+
+</ul>
+</li>
+<li><a>Emplois</a>
+<ul>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type':"offre",'categorie':'anc_emploi' })}}">Les Offres d'Emploi</a></li>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type': "demande",'categorie':'anc_emploi' })}}">Les Demandes d'Emploi</a></li>
+<li><a href="{{path('SitePortailBundle_cre_annonce', { 'categorie':'anc_emploi' })}}">Creer Votre Annonces</a></li>
+{% if (app.session.get('type')=='membre') %} 
+<li><a href="#">Historique des Annonces</a></li>
+{% endif %}
+</ul>
+</li>
+<li><a>Auto</a>
+<ul>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type':"offre",'categorie':'anc_auto' })}}">Les Offres de Automobiles</a></li>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type': "demande",'categorie':'anc_auto' })}}">Les Demandes Automobiles</a></li>
+<li><a href="{{path('SitePortailBundle_cre_annonce', { 'categorie':'anc_auto' })}}">Creer Votre Annonces</a></li>
+{% if (app.session.get('type')=='membre') %} 
+<li><a href="#">Historique des Annonces</a></li>
+{% endif %}
+</ul>
+</li>
+<li><a>Immobilier</a>
+<ul>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type':"offre",'categorie':'anc_immobl' }) }}">Les Offres de Immobilieres</a></li>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type': "demande",'categorie':'anc_immobl' }) }}">Les Demandes Immobilieres</a></li>
+<li><a href="{{path('SitePortailBundle_cre_annonce', { 'categorie':'anc_immobl' }) }}">Creer Votre Annonces</a></li>
+{% if (app.session.get('type')=='membre') %} 
+<li><a href="#">Historique des Annonces</a></li>
+{% endif %}
+</ul>
+</li>
+<li><a>Bon Coin</a>
+<ul>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type':"offre",'categorie':'anc_bncoin' }) }}">Les Offres de Bon Coin </a></li>
+<li><a href="{{path('SitePortailBundle_liste_annonce_site', { 'type': "demande",'categorie':'anc_bncoin' }) }}">Les Demandes Bon Coin</a></li>
+<li><a href="{{path('SitePortailBundle_cre_annonce', { 'categorie':'anc_bncoin' }) }}">Creer Votre Annonces</a></li>
+{% if (app.session.get('type')=='membre') %} 
+<li><a href="#">Historique des Annonces</a></li>
+{% endif %}
+</ul>
+</li>
+<li><a href="#">Loisir</a>
+<ul>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'film' })}}">Films</a></li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'hi-tech' })}}">Hight_Tech</a></li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'documentaire' })}}">Documentaires</a></li>
+<li><a href="{{path('SitePortailBundle_tchat')}}">Tchat</a></li>
+</ul>
+</li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'Accessoires hommes' })}}">Hommes</a></li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'Trucs et Astuces femmes' })}}">Femmes</a></li>
+<li><a href="{{ path('SitePortailBundle_pager', {'categorie':'islamiyat' })}}">إسلاميات</a></li>
+<li><a href="{{ path('SitePortailBundle_contact') }}">Contact</a>
+</li>
+</ul>
+</div>
+                        </nav>

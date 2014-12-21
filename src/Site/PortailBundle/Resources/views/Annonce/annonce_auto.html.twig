@@ -1,0 +1,64 @@
+{% extends "SitePortailBundle:Portail:layout.html.twig" %}
+{% block content %}
+
+<div id="corp">
+<br><br>{{ confirmeAnnonce }}<br>
+
+<form action="{{path('SitePortailBundle_ajout_annonce')}}"method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<input type="hidden"  name="categorie" value="anc_auto">
+<table  border="0" align="center">
+<tr><td colspan=2 align="center">
+
+</td></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.type) }}: </TD><TD>{{ form_widget(form.type) }}</TD><td>{{ form_errors(form.type) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.nature) }}: </TD><TD>{{ form_widget(form.nature) }}</TD><td>{{ form_errors(form.nature) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.marque) }}: </TD><TD>{{ form_widget(form.marque) }}</TD><td>{{ form_errors(form.marque) }}
+</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.modele) }}: </TD><TD>{{ form_widget(form.modele) }}</TD><td>{{ form_errors(form.modele) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.annee) }}: </TD><TD>{{ form_widget(form.annee) }}</TD><td>{{ form_errors(form.annee) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.energie) }}: </TD><TD>{{ form_widget(form.energie) }}</TD><td>{{ form_errors(form.energie) }}</TD>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.kilometrage) }}: </TD><TD>{{ form_widget(form.kilometrage) }}</TD><td>{{ form_errors(form.kilometrage) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.prix) }}: </TD><TD>{{ form_widget(form.prix) }}</TD><td>{{ form_errors(form.prix) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.tel) }}: </TD><TD>{{ form_widget(form.tel) }}</TD><td>{{ form_errors(form.tel) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.email) }}: </TD><TD>{{ form_widget(form.email) }}</TD><td>{{ form_errors(form.email) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.photo) }}: </TD><TD>{{ form_widget(form.photo) }}</TD><td>{{ form_errors(form.photo) }}</TD>
+</tr>
+<TR>
+	<TD width=200px valign="top">{{ form_label(form.description) }}: </TD><TD>{{ form_widget(form.description) }}</TD><td>{{ form_errors(form.description) }}</TD>
+</tr>
+
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center"><input type="submit" value="envoyer"  ></td>
+</TR>
+</table>
+</form>
+<br><br><br>
+</div>
+
+{% endblock %}

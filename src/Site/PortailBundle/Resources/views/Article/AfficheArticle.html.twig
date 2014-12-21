@@ -1,0 +1,21 @@
+{% extends "SitePortailBundle:Article:gestionArticle.html.twig" %}
+{% block contenu %}<br><br>
+<center>
+
+<table align="center" padding="20px">
+<tr>
+<tr><td>categorie:<font color="#f20000">{{ article.categorie }}</font></td></tr>
+<tr><td COLSPAN=2><center><font color="#ff0000"><h2 ><b><h2>{{ article.titre}}</b></h2></font></center></td></tr>
+<tr><td><img src="{{asset(article.media)}}" width="150px" height="150px"/></td><td>
+{{ article.contenu}}</td></tr>
+<td> <br>roposer par:{% if( article.id_mbr)==null %}admin :{{article.id_admin}}{%else%} Membre :{{article.id_mbr}}{% endif %}</td></tr>
+<tr><td><br>nom:{{ article.nom}}</td></tr>
+<tr><td><br>email:{{ article.email}}</td></tr>
+<tr><td><br> date:{{ article.date}}</td></tr>
+<tr><td><br>{% if(article.valider=="n") %}<a href="{{ path('SitePortailBundle_valide_article', { 'id': article.id ,'categorie':article.categorie}) }}">Valider</a>{% else %}{{ article.id_admin}}{% endif %}</td></tr>
+<tr><td><br><a href="{{ path('SitePortailBundle_supprime_article', { 'id': article.id,'categorie':article.categorie}) }}">Supprimer</a></td>
+</tr>
+
+</table>
+</center>
+{%endblock%} 

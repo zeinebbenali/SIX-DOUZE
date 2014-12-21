@@ -1,0 +1,38 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+<div id="corp" STYLE="background:#ffffff;" ><br>
+<center><b>La Liste des {{ type }} Immobillier </b></center><br><br>
+<table style="padding:10px;border-radius:6px;width:100%;" cellspacing="10">
+<tr style="padding:10px;background-color:#EBEBFF;">
+<th>date</th>
+<th>nature</th>
+
+<th>prix</th>
+<th>surface</th>
+<th>gouvernourat</th>
+<th>Description</th>
+<th>email</th>
+<th>Afficher</th>
+</tr>
+{% for anc in annonces %}
+<tr>
+<td>{{ anc.date}}</td>
+<td>{{ anc.nature }}</td>
+<td>{{ anc.prix}}</td>
+<td>{{ anc.surface}}</td>
+<td>{{ anc.gouver}}</td>
+<td>{{ anc.descri}}</td>
+
+<td>{{ anc.email}}</td>
+<td><a href="{{ path('SitePortailBundle_lire_annonce', { 'id': anc.id,'categorie':'anc_immobl'}) }}">Affiche</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun annonces n'a été trouvé.</td>
+</tr>
+{% endfor %}
+</table>
+</center>
+</div>
+{% endblock %}

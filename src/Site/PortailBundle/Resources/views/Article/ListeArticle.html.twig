@@ -1,0 +1,41 @@
+{% extends "SitePortailBundle:Article:gestionArticle.html.twig" %}
+{% block contenu %}
+<center>
+<br><center><font color="#ff0000"><b><h2><b>La Liste des Aticles {{categorie}} </h2></b></font></center><br>
+<table class="gestion">
+<tr>
+
+<th>proposer par </th>
+<th>E-mail</th>
+<th>date</th>
+
+<th>Titre</th>
+<th>contenu</th>
+
+<th>Afficher</th>
+<th>Valider</th>
+<th>Supprimer</th>
+</tr>
+{% for art in pagerfanta.currentPageResults %}
+<tr >
+<td>{{ art.nom }}</td>
+<td>{{ art.email}}</td>
+<td>{{ art.date}}</td>
+<td>{{ art.titre}}</td>
+<td>{{ art.contenu|slice(0,20)}}</td>
+<td><a href="{{ path('SitePortailBundle_affiche_article', { 'id': art.id }) }}">Affiche</a></td>
+<td>{% if(art.valider=="n") %}<a href="{{ path('SitePortailBundle_valide_article', { 'id': art.id ,'categorie':art.categorie}) }}">Valider</a>{% else %}{{ art.id_admin}}{% endif %}</td>
+
+
+<td><a href="{{ path('SitePortailBundle_supprime_article', { 'id': art.id,'categorie':art.categorie}) }}">Supprimer</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun message n'a été trouvé.</td>
+</tr>
+{% endfor %}
+{{ pagerfanta(pagerfanta,'default_translated',{'routeName': 'SitePortailBundle_liste_categorie'}) }}
+</table>
+</center>
+{%endblock%} 

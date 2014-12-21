@@ -1,0 +1,45 @@
+#form{
+width: 200px;
+border: 1px solid #B2B2B2;
+-moz-border-radius:6px;
+border-radius:6px;
+padding: 3px;
+}
+
+#form1 select {
+
+width: 252px;
+border: 1px solid #B2B2B2;
+
+border-radius:6px;
+padding-top: 3px;
+float:left;
+}
+#form1 input {
+
+width: 252px;
+border: 1px solid #B2B2B2;
+
+border-radius:6px;
+padding-top: 3px;
+float:left;
+}
+#form1 textarea {
+
+width: 252px;
+height:200px;
+border: 1px solid #B2B2B2;
+
+border-radius:6px;
+padding-top: 3px;
+float:left;
+}
+#form2 input  {
+width: 150px;
+background-color:#888;
+border: 1px solid #DDD;
+-moz-border-radius:6px;
+border-radius:6px;
+padding: 3px;
+vertical-align:center;
+}

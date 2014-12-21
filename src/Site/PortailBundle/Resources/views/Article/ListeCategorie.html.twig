@@ -1,0 +1,27 @@
+{% extends "SitePortailBundle:Article:gestionArticle.html.twig" %}
+{% block contenu %}
+
+<br><center><font color="#ff0000"><b><h2>La Liste des Categorie</h2></b></font></center><br>
+<center>
+<table  class="gestion">
+<tr>
+<th>Categorie</th>
+<th>nombre de articles</th>
+<th></th>
+</tr>
+{% for c in pagerfanta.currentPageResults %}
+<tr >
+<td>{{ c.categorie }}</td>
+<td>{{ c.total }}</td>
+<td><a href="{{ path('SitePortailBundle_Liste_article', { 'categorie': c.categorie }) }}">Affiche</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun categorie n'a été trouvé.</td>
+</tr>
+{% endfor %}
+{{ pagerfanta(pagerfanta,'default_translated',{'routeName': 'SitePortailBundle_liste_categorie'}) }}
+</table>
+</center>
+{%endblock%} 

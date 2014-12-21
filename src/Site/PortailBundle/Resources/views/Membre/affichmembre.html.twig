@@ -1,0 +1,22 @@
+{% extends "SitePortailBundle:Contact:gestion_contact.html.twig" %}
+{% block contenu %}
+<center>
+{% if(message=="erreur") %}
+{{message}}
+{% else %}
+<table class="gestion">
+<tr><td>nom : </td><td>{{ contact.nom }}</td></tr>
+<tr><td>prenom :</td><td>{{ contact.prenom }}</td></tr>
+<tr><td>email</td><td>{{ contact.email}}</td></tr>
+<tr><td>objet :</td><td>{{ contact.objet}}</td></tr>
+<tr><td>contenu :</td><td>{{ contact.contenu}}</td></tr>
+<tr><td>date d'envoie :</td><td>{{ contact.date_envoie}}</td>
+
+</tr>
+
+</table>
+</center>
+<a href="{{ path('SitePortailBundle_Admin_deletcontact', { 'id': contact.id_contact }) }}">Supprimer</a>
+
+{% endif %}
+{% endblock %} 

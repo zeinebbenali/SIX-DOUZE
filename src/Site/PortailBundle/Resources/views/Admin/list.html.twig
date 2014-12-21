@@ -1,0 +1,32 @@
+{% extends "SitePortailBundle:Admin:gerer_admin.html.twig" %}
+{% block contenu %}
+<center>
+{{message}}
+<table class="gestion">
+<tr>
+<td>nom </td>
+<td>login</td>
+<td>mot de pass</td>
+
+<td></td>
+<td></td>
+</tr>
+{% for admin in list %}
+<tr>
+<td>{{ admin.nom_admin }}</td>
+<td>{{ admin.log_admin}}</td>
+<td>{{ admin.pwd_admin}}</td>
+
+<td><a href="{{ path('SitePortailBundle_edit_admin', { 'id': admin.id_admin }) }}">modifier</a></td>
+<td><a href="{{ path('SitePortailBundle_delete_admin', { 'id': admin.id_admin }) }}">Supprimer</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun admin n'a été trouvé.</td>
+</tr>
+{% endfor %}
+</table>
+
+</center>
+{%endblock%} 

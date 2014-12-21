@@ -1,0 +1,40 @@
+{% extends "SitePortailBundle:Contact:gestion_contact.html.twig" %}
+{% block contenu %}
+<center>
+
+ <br><center><font color="#ff0000"><b><h2><b>{{message}}</h2></b></font></center><br>
+
+
+<table class="gestion">
+<tr>
+<th>nom </th>
+<th>prenom</th>
+<th>email</th>
+<th>objet</th>
+<th>contenu</th>
+<th>date d'envoie</th>
+<th></th>
+<th></th>
+</tr>
+{% for c in pagerfanta.currentPageResults %}
+<tr>
+<td>{{ c.nom }}</td>
+<td>{{ c.prenom }}</td>
+<td>{{ c.email}}</td>
+<td>{{ c.objet}}</td>
+<td>{{ c.contenu|slice(1,20)}}{{'...'}}</td>
+<td>{{ c.date_envoie}}</td>
+<td><a href="{{ path('SitePortailBundle_Admin_Affichcontact', { 'id': c.id_contact }) }}">Affiche</a></td>
+<td><a href="{{ path('SitePortailBundle_Admin_deletcontact', { 'id': c.id_contact }) }}">Supprimer</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun Contact n'a été trouvé.</td>
+</tr>
+{% endfor %}
+{{ pagerfanta(pagerfanta,'default_translated',{'routeName': 'SitePortailBundle_Admincontact'}) }}
+</table>
+
+</center>
+{%endblock%} 

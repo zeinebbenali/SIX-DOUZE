@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tagClouds>
+  <einstellungen>
+    <allgemein modus="globus" breite="400" hoehe="250" hintergrundfarbe="0xFFFFFF" rahmenfarbe="0xFFFFFF"/>
+    <wolke prozentsatz_vertikal=""/>
+    <globus radius="150" maximale_Drehgeschwindigkeit="1.5"/>
+    <fliegen geschwindigkeit_aktiv="" geschwindigkeit_passiv="" richtung=""/>
+    <schrift schriftart="Arial" kleinste_Schriftgr="12" groesste_Schriftgr="22" link_dekoration="nounderline"/>
+    <farbe wert="0xFF7600"/>
+    <farbe wert="0x87A800"/>
+    <farbe wert="0xDE2159"/>
+    <farbe wert="0x039FAF"/>
+  </einstellungen>
+  <tag linkURL="" prioritaet="6" text="Bon Coin " target="_self"/>
+  <tag linkURL="" prioritaet="7" text="Femmes " target="_self"/>
+  <tag linkURL="" prioritaet="5" text=" Sports National" target="_self"/>
+  <tag linkURL="" prioritaet="7" text=" Accessoires Hommes" target="_self"/>
+  <tag linkURL="" prioritaet="4" text=" Sports International" target="_self"/>
+  <tag linkURL="" prioritaet="4" text="  Hight-Tech" target="_self"/>
+  <tag linkURL="" prioritaet="8" text="  Cuisine" target="_self"/>
+  <tag linkURL="" prioritaet="6" text=" Actualité Nationale " target="_self"/>
+  <tag linkURL="" prioritaet="9" text="  Vente" target="_self"/>
+  <tag linkURL="" prioritaet="2" text=" Actualité Internationale" target="_self"/>
+  <tag linkURL="" prioritaet="7" text=" Sports" target="_self"/>
+  <tag linkURL="" prioritaet="10" text=" Les Offres Automobiles" target="_self"/>
+  <tag linkURL="" prioritaet="9" text=" Achat " target="_self"/>
+  <tag linkURL="" prioritaet="9" text="روائع التلاوات  " target="_self"/>
+  <tag linkURL="" prioritaet="6" text=" Accessoires " target="_self"/>
+</tagClouds>

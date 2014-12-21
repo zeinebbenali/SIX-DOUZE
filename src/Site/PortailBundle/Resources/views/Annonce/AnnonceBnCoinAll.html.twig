@@ -1,0 +1,52 @@
+{% extends "SitePortailBundle:Annonce:gestionAnnonce.html.twig" %}
+{% block contenu %}
+<center>
+<br><center><font color="#ff0000"><b><h2><b>La Liste des Annonces BonCoin</h2></b></font></center><br>
+<br>
+
+<table class="gestion">
+<tr>
+<th>type</th>
+
+<th>nature</th>
+<th>date</th>
+<th>prix</th>
+
+<th>gouvernourat</th>
+
+<th>email</th>
+<th>id admin</th>
+<th>id membre</th>
+<th>Afficher</th>
+<th>Valider</th>
+<th>Supprimer</th>
+</tr>
+{% for anc in pagerfanta.currentPageResults %}
+<tr>
+
+<td>{{ anc.type }}</td>
+<td>{{ anc.nature }}</td>
+
+<td>{{ anc.date}}</td>
+<td>{{ anc.prix}}</td>
+
+<td>{{ anc.gouver}}</td>
+
+<td>{{ anc.email}}</td>
+<td>{{ anc.id_admin}}</td>
+<td>{{ anc.id_mbr}}</td>
+<td><a href="{{ path('SitePortailBundle_affiche_annonce', { 'id': anc.id,'categorie':'anc_bncoin'}) }}">Affiche</a></td>
+<td>{% if(anc.valide=="n") %}<a href="{{ path('SitePortailBundle_valide_annonce', { 'id': anc.id,'categorie':'anc_bncoin'}) }}">Valider</a>{% endif %}</td>
+
+
+<td><a href="{{ path('SitePortailBundle_supprime_annonce', { 'id': anc.id,'categorie':'anc_bncoin' }) }}">Supprimer</a></td>
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun Annonces n'a ete trouve.</td></tr>
+{% endfor %}
+{{ pagerfanta(pagerfanta,'default_translated',{'routeName': 'SitePortailBundle_liste_annonce'}) }}
+</table>
+</center>
+{%endblock%} 

@@ -1,0 +1,34 @@
+﻿<HTML lang="ar" >
+<HEAD>
+<meta http-equiv="Content-Type"  charset=UTF-8">
+<link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+<tiltle></title>
+{% block stylesheets %}
+			
+			<link rel="stylesheet" href="{{ asset('css/admin_bouton.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/admin_gestion.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/layout_admin.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/contact_gestion.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/form.css') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/pagerfantaDefault.css') }}" type="text/css" />
+{% endblock %}
+</head>
+<body >
+<div id="container">
+<div id="header">
+
+<div id="logo" class="logo">
+<img  src="{{ asset('images/logo.png') }}"   />
+{% block admin %}{% endblock %}
+</div>
+</div>
+<div  class="nav">
+{% block bar %}{% endblock %}
+</div>
+
+<div id="corp">{% block content %}{% endblock %}</div>
+
+</div>
+
+</body>
+</html>

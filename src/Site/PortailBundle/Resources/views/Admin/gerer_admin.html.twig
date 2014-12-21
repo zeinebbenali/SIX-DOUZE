@@ -1,0 +1,28 @@
+{% extends "SitePortailBundle:Admin:admin_gestion.html.twig" %}
+{% block gestion %}
+<table>
+<tr>
+<td>
+<nav id="article12">
+<div  class="menu_div">
+<ul class="menu_ul">
+
+<li>
+<a  href="{{ path('SitePortailBundle_ajout_admin') }}" >Ajouter un Administrateur</a></li>
+<li>
+<a  href="{{path('SitePortailBundle_list_admin') }}" >Liste des Administrateur</a>
+
+</li>
+</ul>
+</div>
+</nav>
+</td>
+</tr>
+<tr>
+<td><br>{% block contenu %}{% endblock %} </td>
+
+</tr>
+</table>
+
+
+{% endblock %}

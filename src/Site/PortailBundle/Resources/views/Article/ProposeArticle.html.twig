@@ -1,0 +1,52 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+<div id="corp">
+
+<br><br>
+{% if app.session.hasFlash('enregister_article') %}
+   
+       {{ app.session.flash('enregister_article') }}
+   
+{% endif %}<br>
+
+
+<form name="f" action="{{path('SitePortailBundle_proposer_article')}}" method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<table  border="0" align="center">
+<TR>
+	<TD width=200px>{{ form_label(form.nom) }}:</TD><TD>{{ form_widget(form.nom) }}</TD><td>{{ form_errors(form.nom) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.email) }}:  </TD><TD>{{ form_widget(form.email) }}</TD><td>{{ form_errors(form.email) }}</td>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.titre) }}:  </TD><TD>{{ form_widget(form.titre) }}</TD><td>{{ form_errors(form.titre) }}</td>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.categorie) }}:  </TD><TD>{{ form_widget(form.categorie) }}</TD><td>{{ form_errors(form.categorie) }}</td>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.contenu) }}: </TD><TD>{{ form_widget(form.contenu) }}</TD><td>{{ form_errors(form.contenu) }}</td>
+</tr>
+</script>
+<TR>
+	<TD width=200px>{{ form_label(form.media) }}:  </TD><TD>{{ form_widget(form.media) }}</TD><td>{{ form_errors(form.media) }}</td>
+</tr>
+
+{{ form_rest(form) }}
+<tr>
+	<TD colspan=2 align="center"><INPUT  type="submit" value="Valider" ></td>
+</TR>
+</form>
+
+
+</table>
+<br><br><br>
+</div>
+
+{% endblock %}

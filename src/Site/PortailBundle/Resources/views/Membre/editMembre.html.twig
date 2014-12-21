@@ -1,0 +1,45 @@
+{% extends "SitePortailBundle:Portail:layout.html.twig" %}
+
+{% block content %}
+
+
+<div id="corp">
+
+<br><br><br>
+{% if(message!="")%}
+<br><center>{{message}}</center><br><br>
+{% else %}
+<table  border="0" align="center">
+<form  action="{{ path('SitePortailBundle_valide_edit_membre') }}" method="post" >
+<input   type="hidden" name="id"  value="{{ membre.getid }}">
+<TR>
+	<TD width=200px>Nom: </TD><TD><input id="form"  type="text" name="nom"  value="{{ membre.getnom }}"></TD>
+</tr>
+<TR>
+	<TD width=200px>Prenom: </TD><TD><input id="form" type="text" name="prenom" value="{{ membre.getprenom }}"></TD>
+</tr>
+<TR>
+	<TD width=200px>Tel: </TD><TD><input id="form" type="text" name="tel" value="{{ membre.gettel }}"></TD>
+</tr>
+<TR>
+	<TD width=200px>E-mail: </TD><TD><input id="form" type="text" name="email" value="{{ membre.getemail }}"></TD>
+</tr>
+<TR>
+	<TD width=200px>Mot de passe: </TD><TD><input id="form"  type="password" name="motpass" value="{{ membre.getmotpass }}"></TD>
+</tr>
+<TR>
+	<TD width=200px>Confirmer mot de passe: </TD><TD><input id="form"  type="password" name="pwd1" value="{{ membre.getmotpass }}"></TD>
+</tr>
+
+<tr>
+	<TD colspan=2 align="center"><INPUT  type="submit" value="Valider"  ></td>
+</TR>
+</form>
+
+
+</table>
+<br><br><br>
+</div>
+
+{% endif %}
+{% endblock %}

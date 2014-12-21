@@ -1,0 +1,24 @@
+<div id="annonce-site"><table><tr><th valign="top">Annonce</th><td>
+
+<marquee behavior="scroll" direction="left" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 2, 0);" scrollamount="2">
+
+{% for a in app.session.get('anceauto') %}
+<b> Auto </b>:{{ a.nature}}&nbsp;{{a.marque}} &nbsp;{{a.modele}}&nbsp;{{a.prix}}&nbsp;&nbsp;
+
+{% endfor %}
+{% for a in app.session.get('ancemploi') %}
+<b> Emploi </b>:&nbsp;{{a.nature}}&nbsp;{{ a.secteur}}&nbsp;&nbsp{{ a.letter}}&nbsp;;
+
+{% endfor %}
+{% for a in app.session.get('ancimbl') %}
+<b> Immobillier </b>:&nbsp;<u>{{ a.type}}</u>&nbsp;{{ a.nature}}&nbsp;{{ a.descri}}&nbsp;{{ a.surface}}&nbsp;{{ a.prix}}&nbsp;&nbsp;en&nbsp;{{ a.gouver}}
+
+{% endfor %}
+{% for a in app.session.get('ancbn') %}
+<b> Bon Coin </b>:&nbsp;<u>{{ a.type}}</u>&nbsp;{{ a.nature}}&nbsp;{{ a.descri}}&nbsp;&nbsp;{{ a.prix}}en&nbsp; dans en&nbsp;{{ a.gouvern}} 
+
+{% endfor %}
+</marquee>
+
+</td></tr>
+</table></div>

@@ -1,0 +1,25 @@
+{% extends "SitePortailBundle:Annonce:gestionAnnonce.html.twig" %}
+{% block contenu %}
+<center>
+La Liste des Annonces Immoble <br><br>
+<table class="gestion">
+<tr>
+<tr><td>type</td><td>{{ anc.type }}</td></tr>
+<tr><td>nature</td><td>{{ anc.nature }}</td></tr>
+<tr><td>date</td><td>{{ anc.date}}</td></tr>
+<tr><td>prix</td><td>{{ anc.prix}}</td></tr>
+
+<tr><td>gouvernourat</td><td>{{ anc.gouver}}</td></tr>
+
+<tr><td>email</td><td>{{ anc.email}}</td></tr>
+<tr><td>id admin</td><td>{{ anc.id_admin}}</td></tr>
+<tr><td>id membre</td><td>{{ anc.id_mbr}}</td></tr>
+<tr><td><img src="asset('anc.photo')"/></td></tr>
+<tr><td>{% if(anc.valide=="n") %}<a href="{{ path('SitePortailBundle_valide_annonce', { 'id': anc.id ,'categorie':'anc_bncoin'}) }}">Valider</a>{% endif %}</td></tr>
+
+<tr><td><a href="{{ path('SitePortailBundle_supprime_annonce', { 'id': anc.id,'categorie':'anc_bncoin' }) }}">Supprimer</a></td>
+
+</tr>
+</table>
+</center>
+{%endblock%} 

@@ -1,0 +1,28 @@
+{{message}}
+<table class="gestion">
+<tr>
+<th>nom </th>
+<th>prenom</th>
+<th>email</th>
+<th>Types</th>
+<th>Telephone</th>
+<th>nom de societe</th>
+
+</tr>
+{% for m in membres %}
+<tr>
+<td>{{ m.nom_mbr }}</td>
+<td>{{ m.prenom_mbr}}</td>
+<td>{{ m.email}}</td>
+<td>{{ m.type}}</td>
+<td>{{ m.tel}}</td>
+<td>{{ m.nom_societe}}</td>
+
+
+</tr>
+{% else %}
+<tr>
+<td>Aucun acteur n'a été trouvé.</td>
+</tr>
+{% endfor %}
+</table>

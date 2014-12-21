@@ -1,0 +1,16 @@
+{% extends "SitePortailBundle:Annonce:gestionAnnonce.html.twig" %}
+{% block contenu %}
+<center>
+La Liste des Annonces Emploi<br> <br>
+<table class="gestion" border=2 style="border-style:solid;border-color:#000000;">
+
+<tr><td>date :</td><td>{{ anc.date}}</td></tr>
+<tr><td>letter :</td><td>{{ anc.letter}}</td></tr>
+<tr><td>secteur :</td><td>{{ anc.secteur}}</td></tr>
+<tr><td>cv :</td><td><a href="{{ anc.cv}}">cv</a></td></tr>
+<tr><td>{% if(anc.valide=="n") %}<a href="{{ path('SitePortailBundle_valide_annonce', { 'id': anc.id ,'categorie':'emploi'}) }}">Valider</a>{% endif %}</td></tr>
+<tr><td><a href="{{ path('SitePortailBundle_supprime_annonce', { 'id': anc.id ,'categorie':'emploi' }) }}">Supprimer</a></td>
+</tr>
+</table>
+</center>
+{%endblock%} 

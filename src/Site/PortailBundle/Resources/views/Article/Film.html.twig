@@ -1,0 +1,7 @@
+
+<table valign="top">
+{% for art in app.session.get('film') %}
+<tr valign="top"><td valign="top"><img style="height:80px; width:80px; border-radius:5px; vertical-align:top;"   src="{{ asset(art.media)}}"/></td><td>{{art.titre|slice(0,150)}}
+<br>
+<a href={{ path('SitePortailBundle_lire_article', { 'id': art.id } ) }}> LIRE +</a></td></tr>
+{% endfor%}</table>

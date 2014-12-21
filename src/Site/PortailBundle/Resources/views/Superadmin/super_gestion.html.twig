@@ -1,0 +1,48 @@
+{% extends "SitePortailBundle:Admin:admin_layout.html.twig" %}
+
+
+{% block content %}
+
+<table >
+<tr>
+	<TD >
+	<table><tr><td><div id="gestion1">
+		<br>
+		<button type="submit" width="400px" ><img src="{{ asset('images/home.png') }}" width="16px" height="16px">Accueil </button><br>
+		<button type="submit"  width="400px"><img src="{{ asset('images/membre.png') }}" width="16px" height="16px"> Gestion des membres    </button>
+		<br>
+		<button type="submit"  width="400px"><img src="{{ asset('images/publication.png') }}" width="16px" height="16px"> Gestion des publications</button>
+		<br>
+		<button type="submit"  width="400px"><img src="{{ asset('images/interaction.png') }}" width="16px" height="16px"> Gestion des interactions</button>
+		<br>
+		<a href="{{ path('SitePortailBundle_gerer_contact') }}" ><button type="submit"  width="400px">Gestion des contacts</button></a><br>
+		<a href="{{ path('SitePortailBundle_gerer_message') }}" ><button type="submit" width="400px"><img src="{{ asset('images/message.png') }}" width="16px" height="16px">Gestion des messages</button></a><br>
+		<a href="{{ path('SitePortailBundle_gestion_NewsLetters') }}" ><button type="submit"  width="400px">Gestion des NewsLetters</button></a><br>
+		
+		
+	<a href="{{ path('SitePortailBundle_SuperAdmin_gere_admin') }}" ><button type="submit" name="gestion_admin" width="400px">Gestion des Administrateur</button></a><br>
+	</div></td></tr>
+	<tr><td><div id="retour_site">
+	<a href="{{ path('SitePortailBundle_Admin_deconnexion') }}" >Deconnexion</a><br>
+	<button type="submit" name="gestion_int">Site web</button><br>
+	</div></td></tr></table>
+	
+	</TD>
+	<TD><div id="gestion2">
+	{% block gestion %}
+	<table>
+	<tr><td id="titre">
+	<center><h1>Bienvenu</h1></center>
+	</td>
+	<tr>
+	<tr><td id="gestion"></td></tr>
+	</table>
+	{% endblock %}
+	</div>
+	</TD>
+</tr>
+</table>
+<br><br><br>
+
+{% endblock %}
+

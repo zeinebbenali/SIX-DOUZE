@@ -1,0 +1,44 @@
+{% extends "SitePortailBundle:Portail:index.html.twig" %}
+{% block corp %}
+
+<div id="corp" style="background-color:#ffffff">
+<br>
+<b><h2 color="#E60000">Ajouter Votre Annonce Immobiller </h2></b>
+<br> <center><b>{{ confirmeAnnonce }}</b></center><br>
+
+<form action="{{path('SitePortailBundle_ajout_annonce')}}" method="post" {{ form_enctype(form) }} > 
+
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<input type="hidden"  name="categorie" value="anc_emploi">
+<table  border="0" align="center">
+<tr><td colspan=2 align="center">
+
+</td></tr>
+<TR>
+	<TD width=200px>{{ form_label(form.type) }}: </TD><TD id="form1">{{ form_widget(form.type) }}</TD><td>{{ form_errors(form.type) }}
+</TD>
+<TR>
+	<TD width=200px>{{ form_label(form.nature) }}: </TD><TD id="form1" >{{ form_widget(form.nature) }}</TD><td>{{ form_errors(form.nature) }}
+</TD>
+</tr>
+
+<TR>
+	<TD width=200px>{{ form_label(form.letter) }}:</TD><TD id="form1">{{ form_widget(form.letter) }}</TD><td>{{ form_errors(form.letter) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.cv) }}:</TD><TD id="form1">{{ form_widget(form.cv) }}</TD><td>{{ form_errors(form.cv) }}</TD>
+</tr>
+<TR>
+	<TD width=200px>{{ form_label(form.secteur) }}:</TD><TD id="form1">{{ form_widget(form.secteur) }}</TD><td>{{ form_errors(form.secteur) }}</TD>
+</tr>
+<tr>{{ form_rest(form) }}
+	<TD colspan="2" align="center"><input type="submit" value="envoyer"  ></td>
+</TR>
+</table>
+</form>
+<br><br><br>
+</div>
+
+{% endblock %}

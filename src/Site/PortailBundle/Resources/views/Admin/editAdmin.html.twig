@@ -1,0 +1,34 @@
+{% extends "SitePortailBundle:Admin:gerer_admin.html.twig" %}
+{% block contenu %}
+<center>
+<br>
+
+<br>
+{% if (m!="") %}
+<center>
+<img src="{{ asset('images/valide.png') }}" width="100px" height="100px"><br> {{m}}
+</center>
+{% else %}
+<table class="gestion_edit">
+<form action="{{ path('SitePortailBundle_valid_edit_admin') }}" method="post" {{ form_enctype(form) }} > 
+<input type="hidden" name="id" value="{{ a.getid }}">
+<div class="error">
+{{ form_errors(form) }}
+</div>
+<tr><td>{{ form_label(form.nom) }}:</td></tr>
+<tr><td>{{ form_widget(form.nom) }}</td></tr>
+<tr><td>{{ form_label(form.login) }}:</td></tr>
+<tr><td>{{ form_widget(form.login) }}</td></tr>
+<tr><td>{{ form_label(form.motpasse) }}:</td></tr>
+<tr><td>{{ form_widget(form.motpasse) }}</td></tr>
+<tr><td>{{ form_label(form.confirme_motpasse) }}:</td></tr>
+<tr><td>{{ form_widget(form.confirme_motpasse) }}</td></tr>
+{{ form_rest(form) }}
+<tr><td><input type="submit" value="valider"></td></tr>
+
+</form>
+
+</table>
+</center>
+{% endif %}
+{%endblock%} 
